@@ -1,4 +1,4 @@
-package chap01;
+package aaa.chap01;
 
  class Sum2 {
   public static void main(String[] args){
