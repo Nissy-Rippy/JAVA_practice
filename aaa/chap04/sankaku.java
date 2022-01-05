@@ -15,7 +15,7 @@ class sankaku {
         }
         System.out.println();
       }
-    System.out.print("直角三角形を作ります！何段作りますか？？");
+    System.out.print("直角三角形を作ります！何段作りますか？？");                                                          　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
     int num = stdIn.nextInt();
      for (int x = 1; x <= num; x++){
        for (int y = 1; y <= x; y++){
