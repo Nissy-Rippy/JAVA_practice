@@ -18,7 +18,7 @@ class SumGroup {
         if (num == 0) {
           break Outer;
         } else if (num < 0) {
-          break Inner;
+          continue Inner;
         }
         sum += num;
       }
