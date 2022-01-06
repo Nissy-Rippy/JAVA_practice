@@ -12,11 +12,15 @@ class Break {
     for (int i = 0; i <= n; i++){
       System.out.print("足す数は？");
       num = stdIn.nextInt();
-      if(i == 0){
+      if(num == 0){
         break;
+      } else if (num < 0) {
+        continue;
       }
       sum += num;
     }
     System.out.println("合計は" + sum +"ですよ！");
   }
+
+
 }
