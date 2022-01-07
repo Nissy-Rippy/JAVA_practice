@@ -23,9 +23,10 @@ class matome {
        if (x % i != 0){continue;}
        System.out.printf("%d × %d\n", i, x / i);
      }
-
-     for (int i = 1; 1 <= 5; i++) {
-       for (int j = 1; j <= 5; i++)
+     Outer:
+     for (int i = 1; i <= 5; i++) {
+      Inner:
+       for (int j = 1; j <= 5; j++)
          System.out.print("*");
          System.out.println();
      }
