@@ -19,5 +19,13 @@ class Start {
     System.out.printf("10新数では%dです\n", num);
     System.out.printf("8新数では%oです\n", num);
     System.out.printf("16進数では%xです\n", num);
+    int num2 = stdIn.nextInt();
+    System.out.printf("numはnum2よりも大きいですか？？\n答え： %b", num < num2);
+    double ave = (num + num2) / 2.0  ;
+    System.out.println("numとnum2の平均値は：" + ave + "である");
+
+    double sum = (double)(num + num2);
+    int aa;
+    aa = (int)10.00;
   }
 }
