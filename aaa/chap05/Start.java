@@ -23,7 +23,6 @@ class Start {
     System.out.printf("numはnum2よりも大きいですか？？\n答え： %b", num < num2);
     double ave = (num + num2) / 2.0  ;
     System.out.println("numとnum2の平均値は：" + ave + "である");
-
     double sum = (double)(num + num2);
     int aa;
     aa = (int)10.00;
