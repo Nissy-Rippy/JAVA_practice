@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 class Array {
   public static void main(String[] mai){
-   Scanner stdIn ==
+   Scanner stdIn = new Scanner(System.in);
+   
    
   }}
