@@ -12,6 +12,7 @@ class Array {
     System.out.print("明日の食べたいご飯はなんですか？:　");
     String menu = stdIn.next();
     String[] menus = { "apple", "banana", "budou" };
+    System.out.println(menus);
 
   }
 }
