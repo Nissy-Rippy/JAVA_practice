@@ -14,5 +14,6 @@ class Array {
     String[] menus = { "apple", "banana", "budou" };
     System.out.println(menus);
 
+    
   }
 }
