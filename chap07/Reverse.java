@@ -23,5 +23,4 @@ import java.util.Scanner;
       for (int i = 0; i < array.length; i++)
        System.out.println("x[" + i + "] = " + array[i]);
   }
-
 }
