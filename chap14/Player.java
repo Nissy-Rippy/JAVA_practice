@@ -1,7 +1,7 @@
 package chap14;
 
 public interface Player {
-  void player();
+  void play();
   void stop();
 }
 
