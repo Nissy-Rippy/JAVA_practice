@@ -6,5 +6,5 @@ public interface Skinnable {
   public static final int Green = 2;
   public static final int Leopard = 3;
   public static final int blue = 4;
-  public abstract void changeSkin(int skin);
+  void changeSkin(int skin);
 }
