@@ -56,11 +56,7 @@ class Minus1 {
     if (yy == 3) {
       System.out.println("ふの値の時は末尾に飛びます！");
       continue Outer;
-      continue Inner;
-    }
-
-    System.out.println('-');
-
+      continue Inner;　　
     int i;
     for (i = 1; i <= 4; i++) {
       String f = String.format("%%%dd\n", i);
@@ -70,6 +66,7 @@ class Minus1 {
     int y;
     for (y = 0; y <= 5; y+=2) {
       System.out.printf(String.format("%%%dd\n", y), 5);
+      System.out.println();
     }
 
     int[] a = {2,4,5,6,7,8};
