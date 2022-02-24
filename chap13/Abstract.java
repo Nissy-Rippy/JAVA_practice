@@ -1,6 +1,6 @@
 package chap13;
 
- public abstract class Abstract {
+  abstract class Abstract {
   public abstract String toString();
   public abstract void draw();
   public void print() {
@@ -25,7 +25,7 @@ class HorzLine extends AbstLine {
     System.out.println();
   }
 }
-
+abstract void gori();
 class VertLine extends AbstLine{
   VertLine(int length) { super(length); }
   @Override void draw(){

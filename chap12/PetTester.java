@@ -4,7 +4,7 @@ import java.util.Scanner;
 class PetTester {
   public static void main(String[] args) {
     Scanner stdIn = new Scanner(System.in);
-    Pet kurt = new Pet("goria", "gorira mother");
+    Pet kurt = new Pet("goria", "goriramother");
     kurt.introduce();
     RobotPet robo = new RobotPet("robot", "animal");
     robo.introduce();
@@ -19,4 +19,5 @@ class PetTester {
     } 
     p.introduce();
     }
+  
   }
