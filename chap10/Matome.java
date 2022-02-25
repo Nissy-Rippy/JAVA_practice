@@ -11,7 +11,7 @@ public class Matome {
   public Matome(int x) { this.x = x; }
   public Matome(int x, int y) { this.x = x; this.y = y; }
   public Matome(int x, int y, int z) {this(x, y); this.z = z; }
-  public static int getCounter() { return this.counter; }
+  public static int getCounter() { return counter; }
   public int getId() { return id; };
   public String toString() { return "(" + x + "," + y +"," + z + ")"; }
 
