@@ -34,6 +34,8 @@ public static void main(String[] args) {
     System.out.println("加える数が範囲外です////" + e.getMessage());
   } catch (ResultRangeError e) {
     System.out.println("計算結果が範囲外です////" + e.toString());
+    System.out.println("計算結果が範囲外です////" + e.getCause());
+    System.out.println("計算結果が範囲外です////" + e.getMessage());
   }
 }
 
