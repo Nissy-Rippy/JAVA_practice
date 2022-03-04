@@ -12,7 +12,7 @@ public class PeriodicApp {
     int min = Integer.parseInt(mm);
     int sec = Integer.parseInt(ss);
     System.out.println("### min = " + min + "sec = " + sec);
-    if(period > 60) dt = period - (min * 60 + sec);
+    if(period > 60) dt = period - (min * 60 + sec); 
     else dt = period - sec;
     System.out.println("### waiting... dt =  " + dt);
     try{
