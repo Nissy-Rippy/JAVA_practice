@@ -22,6 +22,12 @@ public class List3 {
     list1.remove(0);
     list1.remove("りんご");
 
+    List<String> lists = new ArrayList<>();
+    lists.add("buri");
+    lists.add("buriri");
+    for (List list : lists) {
+      System.out.println(list);
+    }
 
   }
 }
