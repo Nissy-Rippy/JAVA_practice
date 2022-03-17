@@ -1,5 +1,5 @@
 package chap19;
 
-public @interface Functional {
+public interface Functional {
 
 }

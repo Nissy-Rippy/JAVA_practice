@@ -1,9 +1,9 @@
 package chap20;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class FruitList {
   public static void main(String[] args) {
@@ -52,6 +52,6 @@ public class FruitList {
     List<Fruit> list11 = list1.stream()
                          .sorted((f1, f2) -> f2.quantity - f1.quantity)
                          .collect(Collectors.toList());
-    System.out.println(list11);    
+    System.out.println(list11);
   }
 }

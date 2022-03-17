@@ -29,11 +29,11 @@ public class Practice {
     };
 
     System.out.println(greeting.hello("おはにょう"));
-    Comparator<Integer> list1 = Integer::compare;
+    Comparator<Integer> list3 = Integer::compare;
 
     // Collections.sort(list1,
     // (Integer x, Integer y) -> { return Integer.compare(x, y); }
     // );
-    System.out.println(list1);
+    System.out.println(list3);
   }
 }

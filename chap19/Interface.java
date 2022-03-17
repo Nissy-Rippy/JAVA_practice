@@ -1,4 +1,5 @@
 package chap19;
+
 @FunctionalInterface
 public interface Interface {
   public abstract void stop();
