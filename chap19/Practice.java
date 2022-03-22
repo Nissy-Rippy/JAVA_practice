@@ -35,9 +35,7 @@ public class Practice {
     // (Integer x, Integer y) -> { return Integer.compare(x, y); }
     // );
     System.out.println(list3);
+    System.out.println(list3);
 
-
-
-    
   }
 }
