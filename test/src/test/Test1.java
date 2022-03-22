@@ -39,7 +39,7 @@ public class Test1 {
 		                    System.out.println(resultSet.getString("name"));
 		                }
 		            }
-
+								
 		        } catch (SQLException e) {
 		            e.printStackTrace();
 		        }
