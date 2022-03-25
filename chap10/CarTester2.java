@@ -12,8 +12,8 @@ public class CarTester2 {
     System.out.print("購入月： "); int y = stdIn.nextInt();
     System.out.print("購入日： "); int z = stdIn.nextInt();
 
-    Car car = new Car("name", width, height, lenght, fuel, new Day(x, y, z));
+    Car car = new Car("name", 23, 4444, 656564, 4543, new Day(x, y, z));
     System.out.println("購入日" + car.getPurchaseDay());
 
-  } 
+  }
 }

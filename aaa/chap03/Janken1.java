@@ -14,8 +14,8 @@ class Janken1 {
     
     int yourHand;
     String you;
-    do {  
-          yourHand = stdIn.nextInt();      
+    do {
+          yourHand = stdIn.nextInt();
           you = switch(yourHand){
                 case 0 -> "グー";
                 case 1 -> "チョキ";
@@ -34,7 +34,7 @@ class Janken1 {
        case 2 -> "パー";
        default -> "もう一度入力してくださ";
      };
-     String judge ;
+     String judge;
      if (yourHand == 0) {
           if (comHand == 0){
             System.out.println("あいこ");
@@ -59,12 +59,12 @@ class Janken1 {
           } else {
             System.out.println("あいこ");
           }
-        
+
         };
 
         System.out.println("あなたの出した手は" + you + "コンピューターの出した手は" + com + "よって結果は" + judge + "である！！");
 
-       
+
 
   }
 }

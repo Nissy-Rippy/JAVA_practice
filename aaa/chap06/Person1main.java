@@ -50,6 +50,9 @@ class Person {
     this.weight = weight;
   }
 
+  public static void printData(String firstName2, String lastName2, int age2, double height2, double weight2) {
+  }
+
   public String fullName() {
     return this.firstName + " " + this.lastName;
   }

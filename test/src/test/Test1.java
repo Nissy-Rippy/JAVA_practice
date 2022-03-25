@@ -1,4 +1,4 @@
-package test.src.test;
+package test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -39,7 +39,6 @@ public class Test1 {
 		                    System.out.println(resultSet.getString("name"));
 		                }
 		            }
-								
 		        } catch (SQLException e) {
 		            e.printStackTrace();
 		        }

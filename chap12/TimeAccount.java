@@ -5,7 +5,7 @@ package chap12;
   private String no;
   private long balance;
   private long timeBalance;
-  TimeAccount (String n, String num, long z, long timeBalance) { 
+  TimeAccount (String n, String num, long z, long timeBalance) {
     this.name = n; this.no = num; this.balance = z; this.timeBalance = timeBalance;
   }
   public String getName() { return this.name; }
@@ -14,7 +14,7 @@ package chap12;
   public long getTimeBalance() { return this.timeBalance; }
   public void deposit(long k) { balance += k; }
   public void withdraw(long k) { balance -= k; }
-  public void cancel() { 
+  public void cancel() {
     balance += timeBalance;
     timeBalance = 0;
   }

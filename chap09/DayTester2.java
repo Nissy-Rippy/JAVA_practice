@@ -1,6 +1,6 @@
 package chap09;
 import java.util.Scanner;
-import java.util.Arrays;　
+import java.util.Arrays;
 public class DayTester2 {
   public static void main(String[] args) {
     Day day = new Day(2999, 9,01);
