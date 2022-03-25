@@ -19,13 +19,10 @@ public class Vehicle {
   public int length() { return this.length; }
   public int height() { return this.height; }
   public int distance() { return this.distance; }
-  
+
   public void setFuel(int fuel) { this.fuel = fuel; }
   public void setDistance(int distance) { this.distance = distance; }
   public void setLength(int length) { this.length = length; }
   public void setHeight(int height) { this.height = height; }
   public void setValue(int distance) { this.distance = distance; }
-
-  public 
-
   }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Minus1 {
   static double[] ind(double ff) {
-    double[] fe = new double[ff];
+    double[] fe = new double[(int) ff];
   
   }
   static int[] idxArray(int n) {
@@ -27,9 +27,9 @@ class Minus1 {
     Scanner stdIn = new Scanner(System.in);
     int x = stdIn.nextInt();
     int y = -x;
-    int[] ogb = idxArray(4);  
+    int[] ogb = idxArray(4);
     sum(3,4, ogb);
-    
+
     System.out.println(x + "と" + y + "は真逆である？？");
     double z = stdIn.nextDouble();
     System.out.println(z);
@@ -56,7 +56,7 @@ class Minus1 {
     if (yy == 3) {
       System.out.println("ふの値の時は末尾に飛びます！");
       continue Outer;
-      continue Inner;　　
+      continue Inner;
     int i;
     for (i = 1; i <= 4; i++) {
       String f = String.format("%%%dd\n", i);
@@ -76,7 +76,7 @@ class Minus1 {
     ab[1] = 4;
     ab[2] = 45;
     for (int abb : ab) {
-      abb += abb; 
+      abb += abb;
     }
     int[][]  ax = new int[4][4];
     int[][] xxy = {{4,3},

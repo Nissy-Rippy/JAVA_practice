@@ -25,7 +25,7 @@ public class List3 {
     List<String> lists = new ArrayList<>();
     lists.add("buri");
     lists.add("buriri");
-    for (List list : lists) {
+    for (String list : lists) {
       System.out.println(list);
     }
 

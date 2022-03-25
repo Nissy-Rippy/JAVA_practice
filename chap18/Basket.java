@@ -24,8 +24,8 @@ public class Basket<E extends Fruit> {
     BigDecimal totalPrice = PRICE.add(elem.getPrice());  //かごと商品の値段
     System.out.println(elem.getName() + "の入ったカゴの合計は、" + totalPrice + "円です！！");
   }
-  
-  void doSomething(List<? extends Fruit> fruits) { // 型パラメータとして、Fruitを継承したクラスを指定
+
+  public void doSomething(List<? extends Fruit> fruits) { // 型パラメータとして、Fruitを継承したクラスを指定
     // 何らかの処理
   }
   public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class Basket<E extends Fruit> {
     List<Fruit> lf = new ArrayList<>();
     List<Apple12> la = new ArrayList<>();
     ff = la;
-    lf = la;
+    // lf = la;
     ba.getPrintTotalPrice();
     bp.getPrintTotalPrice();
     System.out.println(ba.get().getName());
