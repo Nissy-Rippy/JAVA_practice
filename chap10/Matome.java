@@ -14,9 +14,6 @@ public class Matome {
   public static int getCounter() { return counter; }
   public int getId() { return id; };
   public String toString() { return "(" + x + "," + y +"," + z + ")"; }
-
-
-  
 }
 
 public class Point3Tester{
@@ -25,8 +22,6 @@ public class Point3Tester{
     Matome matome1 = new Matome(1);
     Matome matome2 = new Matome(1,2);
     Matome matome3 = new Matome(2,4,5);
-
-
     System.out.println("matome1 = " + matome1.getId());
   }
 }

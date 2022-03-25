@@ -18,17 +18,19 @@ public abstract class AbstLine extends Abstract {
 
 class HorzLine extends AbstLine {
   HorzLine(int length) { super(length); }
-  @Override void draw() {
+  @Override 
+  public void draw() {
     for (int i = 1; i <= getLength(); i++){
       System.out.print("-");
     }
     System.out.println();
   }
-}
-abstract void gori();
+
+// abstract void gori();
 class VertLine extends AbstLine{
   VertLine(int length) { super(length); }
-  @Override void draw(){
+  @Override
+  public void draw(){
     for (int i = 1; i <= getLength(); i++) {
       System.out.println("|");
     }
@@ -36,7 +38,8 @@ class VertLine extends AbstLine{
 }
 class Point extends Abstract{
   Point(){ };
-  @Override void draw(){
+  @Override
+  public void draw(){
    System.out.println('+');
   }
 }
@@ -48,7 +51,8 @@ class Rectangle extends Abstract{
   Rectangle(int width, int height) {
     this.width = width; this.height = height;
   }
-  @Override void draw(){
+  @Override 
+  public void draw(){
     for (int i = 1; i <= height; i++){
       for(int j = 1; j <= width; j++){
         System.out.println("*");

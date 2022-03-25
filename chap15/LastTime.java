@@ -31,7 +31,7 @@ static void init() {
      if (fw != null) {
        try {
          fw.close();
-       } catch (IOExeception e) {
+       } catch (IOException e) {
          System.out.println("クローズ失敗!!");
        }
      }
@@ -42,6 +42,5 @@ static void init() {
     init();
     System.out.print("今日の気分は　:　");
     String n = stdIn.next();
-    term(kibun);
   }
 }

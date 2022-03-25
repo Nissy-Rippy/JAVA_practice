@@ -22,7 +22,7 @@ public class Car {
     public double getFuel() { return fuel; }
 
     public Day getPurchaseDay() {
-      return new Day(purchaseDay); 
+      return new Day(purchaseDay);
     }
 
 }

@@ -1,6 +1,6 @@
 package chap08;
 
-class Car {
+public class Car {
    private String name;
    private int width;
    private int height;
