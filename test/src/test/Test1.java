@@ -1,4 +1,4 @@
-package test.src.test;
+package test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,6 +13,8 @@ public class Test1 {
 
 		    public static void main(String[] args) throws ClassNotFoundException {
 
+
+					
 		        try {
 		            // com.mysql.cj.jdbc.Driverクラスをロードして、初期化処理を行う
 		            Class.forName(DRIVER);

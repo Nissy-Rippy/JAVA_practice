@@ -1,4 +1,4 @@
-package test;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Test1 {
+public class Tset1 {
 
   private static final String DRIVER = "com.mysql.jdbc.Driver";
 
