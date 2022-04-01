@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ConnectionTest {
-	private static final String DRIVER = "com.my.sql.cj.jdbc.Driver";
+	private static final String DRIVER = "com.mysql.jdbc.Driver";
 	private static final String URL = "jdbc:mysql://localhost:3306/database01?user=user01&password=password01&useSSL=false";
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
