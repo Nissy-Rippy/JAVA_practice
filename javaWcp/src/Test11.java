@@ -23,13 +23,16 @@ public class Test11 {
 
         // Connection（データベースとの接続を表す）、PreparedStatement（発行するSQLを表す）を、それぞれ生成します。
         try (Connection connection = DriverManager.getConnection(URL);
-                PreparedStatement statement = connection.prepareStatement("select * from user")) {
+                PreparedStatement statement = connection.prepareStatement("select * from user");
+								PreparedStatement statement1 = connection.prepareStatement("select * from user01 where id = ?");
+								) {
 
             // StatementにSQLを文字列で与えて実行します。
             // 戻り値は、SQLの実行結果を表す、ResultSet（結果セット）です。
-            try (ResultSet resultSet = statement.executeQuery()) {
-
-                // SQLの実行結果を、行数ぶんだけループしながら表示しています。
+            try (ResultSet resultSet  = statement.executeQuery();
+						     ResultSet resultSet1 = statement1.setLong(1, 1L))
+								
+								{
                 while (resultSet.next()) {
                     System.out.println("----------------------");
                     System.out.println(resultSet.getLong("id"));
