@@ -18,11 +18,9 @@ public class ConnectionTest {
 			throw e;
 		}
 
-		
-
 		try(Connection connection = DriverManager.getConnection(URL);
-		    PreparedStatement statement = connection.prepareStatement("select * from user01")){
-			
+		    PreparedStatement statement = connection.prepareStatement("select * from user01"))
+				{
 			try(ResultSet resultSet = statement.executeQuery()){
 				while (resultSet.next()) {
 					System.out.println("--------------------");
