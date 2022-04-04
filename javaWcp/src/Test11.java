@@ -26,12 +26,10 @@ public class Test11 {
                 PreparedStatement statement = connection.prepareStatement("select * from user");
 								PreparedStatement statement1 = connection.prepareStatement("select * from user01 where id = ?");
 								) {
-
             // StatementにSQLを文字列で与えて実行します。
             // 戻り値は、SQLの実行結果を表す、ResultSet（結果セット）です。
             try (ResultSet resultSet  = statement.executeQuery();
 						     ResultSet resultSet1 = statement1.setLong(1, 1L))
-								
 								{
                 while (resultSet.next()) {
                     System.out.println("----------------------");
@@ -41,13 +39,10 @@ public class Test11 {
                     System.out.println(resultSet.getDate("created_at"));
                 }
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 	}
 }
-
 }
