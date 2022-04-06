@@ -29,7 +29,7 @@ public class Test11 {
             // StatementにSQLを文字列で与えて実行します。
             // 戻り値は、SQLの実行結果を表す、ResultSet（結果セット）です。
             try (ResultSet resultSet  = statement.executeQuery();
-						     ResultSet resultSet1 = statement1.setLong(1, 1L))
+						    //  ResultSet resultSet1 = statement1.setLong(1, 1L))
 								{
                 while (resultSet.next()) {
                     System.out.println("----------------------");
