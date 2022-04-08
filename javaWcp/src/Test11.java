@@ -31,6 +31,8 @@ public class Test11 {
             try (ResultSet resultSet  = statement.executeQuery();
 						    //  ResultSet resultSet1 = statement1.setLong(1, 1L))
 								{
+
+                                    
                 while (resultSet.next()) {
                     System.out.println("----------------------");
                     System.out.println(resultSet.getLong("id"));
