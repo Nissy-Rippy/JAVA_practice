@@ -32,7 +32,6 @@ public class Test11 {
 						    //  ResultSet resultSet1 = statement1.setLong(1, 1L))
 								{
 
-                                    
                 while (resultSet.next()) {
                     System.out.println("----------------------");
                     System.out.println(resultSet.getLong("id"));
@@ -45,6 +44,4 @@ public class Test11 {
             e.printStackTrace();
         }
     }
-	}
-}
 }
