@@ -1,8 +1,6 @@
 package chap19;
-@Fuctional
+@Functional
 public interface Functional {
- 
-
 
   
 } 
