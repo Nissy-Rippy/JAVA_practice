@@ -3,9 +3,7 @@ package chap14;
 class PortablePlayer implements Player, Skinnable {
   private static final int Blue = 0;
   private int skin = Black;
- 
   public PortablePlayer() { }
-
   @Override public void play() {
    System.out.println("再生開始ー！！");
  }
