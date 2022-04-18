@@ -10,6 +10,7 @@ class PortablePlayer implements Player, Skinnable {
   @Override public void stop() {
    System.out.println("再生終了ー！！！");
  }
+
   @Override public void changeSkin(int skin){
     System.out.print("スキンを");
    switch (skin){
@@ -23,4 +24,6 @@ class PortablePlayer implements Player, Skinnable {
     System.out.println("に変更ししました！！");
 
  }
+
+ 
 }
