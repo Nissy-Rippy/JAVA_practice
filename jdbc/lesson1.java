@@ -3,6 +3,9 @@ package jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import mySql.ConnectionTest;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -31,8 +34,21 @@ public class lesson1 {
           statement.setString(2, "山田三郎");
           statement.setLong(3, 1L);
           statement.execute();
-         try{
 
+        // データを削除するときにつかう
+          PreparedStatement statement2 = connection.prepareStatement("delete from user01 where id = ?");
+          statement2.setLong(1, 2L);
+          statement2.execute();
+
+          // try{
+          // Connection connectiontest = DriverManager.getConnection(url);
+          // connectiontest.setAutoCommit(false);
+          // update user01 set money = money - 1000 where id = 1
+          // update user01 set money = money + 1000 where id = 2
+          // connectiontest.commit();
+          // } catch (Exception e) {
+          //   connectiontest.rollback();
+          // }
          }
   }
 }
