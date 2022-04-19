@@ -3,9 +3,6 @@ package jdbc;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import mySql.ConnectionTest;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -48,7 +45,7 @@ public class lesson1 {
           // connectiontest.commit();
           // } catch (Exception e) {
           //   connectiontest.rollback();
-          // }
+          // } 
          }
   }
 }
