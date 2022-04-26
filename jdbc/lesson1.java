@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 public class lesson1 {
   private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
   private static String url = "jdbc:mysql://localhost:3306/database01?user=user01&password=password01&useSSL=false";
-   
+
  public static void main(String[] args) throws ClassNotFoundException {
   try{
       Class.forName(DRIVER);
