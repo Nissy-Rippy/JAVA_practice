@@ -11,7 +11,6 @@ public class Class {
     Outer outer = new Outer();
     Outer.Inner inner = outer.new Inner();
     Outer1 outer1 = new Outer1();
-    
     Outer1.Inner1 oi = new Outer1.Inner1();
 
 

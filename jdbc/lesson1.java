@@ -17,7 +17,6 @@ public class lesson1 {
       e.printStackTrace();
       throw e;
   }
-
        Connection connection = DriverManager.getConnection(url);
         PreparedStatement statement = connection.prepareStatement("insert into user (email, name) values (?, ?)");
         statement.setString(1, "bbb@bbb.bbb");
@@ -45,7 +44,7 @@ public class lesson1 {
           // connectiontest.commit();
           // } catch (Exception e) {
           //   connectiontest.rollback();
-          // } 
+          // }
          }
   }
 }
