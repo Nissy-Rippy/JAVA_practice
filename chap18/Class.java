@@ -17,12 +17,15 @@ public class Class {
     Outer1.Inner1 oi = new Outer1.Inner1();
 
 
-    Human human = new Human();
-    Human.Human_Leg leg = human.new Human_Leg();
+     Human human = new Human();
+     Human.Human_Leg leg = human.new Human_Leg();
 
     new Human().new Human_Leg().kick();
 
+
     leg.kick();
+
+
 
     System.out.println(Desert.APPLE);
     System.out.println(Desert.ICE_CREAM);
