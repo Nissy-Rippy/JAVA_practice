@@ -16,7 +16,7 @@ class Multi {
     for (int ii = 1; ii <= 4; ii++) {
         System.out.printf(String.format("%%%dd\n", ii), 5);
     }
-    for (int jj = 5; jj >= 0; jj--){
+    for (int jj = 5; jj > 0; jj--){
       System.out.printf(String.format("%%%dd\n", jj), 6);
     }
   }

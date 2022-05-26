@@ -19,9 +19,9 @@ public class Car {
      this.fuel = fuel;
    }
 
-   public double getX() { return x;}
-   public double getY() { return y;}
-   public double getFuel() { return fuel;}
+   public double getX() { return x; }
+   public double getY() { return y; }
+   public double getFuel() { return fuel; }
 
    public boolean move(double dx, double dy) {
      double dist = Math.sqrt(dx * dx + dy * dy);
@@ -34,6 +34,7 @@ public class Car {
        return true;
      }
    }
+   
    public void carSpec () {
     System.out.println("車名:　" + name);
     System.out.println("車幅;　" + width + "mm");

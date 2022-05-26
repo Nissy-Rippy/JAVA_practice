@@ -17,7 +17,9 @@ class CarTester2 {
     System.out.print("燃料は:　");
     double fuel = stdIn.nextDouble();
 
-    Car myCar = new Car(name, width, height, length, fuel);
+    Car myCar = new Car("toyota", 30, 50, 100, 0.0, 0.0, 200);
+    myCar.carSpec();
+    
     while (true) {
       System.out.println("現在地(" + myCar.getX() + "," + myCar.getY() + ")　・　残り燃料:　" + myCar.getFuel());
       System.out.print("移動しますか？ [0・・NO / 1・・YES] : ");
@@ -27,6 +29,7 @@ class CarTester2 {
       double dx = stdIn.nextDouble();
       System.out.print("Yの方向のお移動距離: ");
       double dy = stdIn.nextDouble();
+
       if (!myCar.move(dx, dy))
         System.out.println("燃料が足りません");
     }

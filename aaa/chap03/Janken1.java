@@ -62,7 +62,7 @@ class Janken1 {
 
         };
 
-        System.out.println("あなたの出した手は" + you + "コンピューターの出した手は" + com + "よって結果は" + judge + "である！！");
+        System.out.println("あなたの出した手は" + you + "コンピューターの出した手は" + com + "よって結果は" + "である！！");
 
 
 

@@ -71,14 +71,14 @@ class Minus1 {
 
     int[] a = {2,4,5,6,7,8};
     int[]aa;
-    aa = new int[] {4,5,6,7};
+    aa = new int[] {2,3,4,5,6};
     int[] ab = new int[4];
     ab[1] = 4;
     ab[2] = 45;
     for (int abb : ab) {
       abb += abb;
     }
-    int[][]  ax = new int[4][4];
+    int[][] ax = new int[4][4];
     int[][] xxy = {{4,3},
                    {4,3},
                    {4,5}

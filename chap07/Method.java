@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 class Method {
   public static void ps(char a, int b) {
-    while(b-- > 0) {
+    while(b-- > 0){
       System.out.print(a);
     }
   }
@@ -26,12 +26,14 @@ class Method {
       System.out.print("*");
     }
   }
+
   public static void putSquare(int y) {
     for (int i = 1; i <= y; i++) {
       putStar(y);
       System.out.println();
     }
   }
+  
   public static void putTyohoukei(int z, int v) {
     while (z-- > 0) {
       putStar(v);

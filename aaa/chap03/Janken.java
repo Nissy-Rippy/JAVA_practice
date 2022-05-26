@@ -13,16 +13,20 @@ class Janken {
     System.out.println("ジャンケンを開始します");
     System.out.println("0: グー、1: チョキ、2: パー いずれより選んでください");
     
-    int yourHand = stdIn.nextInt();
-    while (yourHand < 3 && yourHand > 0){
-    String win = switch(yourHand){
+     int yourHand = stdIn.nextInt();
+
+    while(yourHand > 3 && yourHand < 0) {
+      System.out.println("もう一度入力してください");
+      yourHand = stdIn.nextInt();
+    }
+
+     String win = switch(yourHand){
                 case 0 -> "グー";
                 case 1 -> "チョキ";
                 case 2 -> "パー";
                 default -> "もう一度入力してください";
                 };
-    System.out.print("あなたは: ");
-
-  }
+  
+  System.out.println("あなたは：" + win);
 }
 }
