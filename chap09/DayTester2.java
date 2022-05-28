@@ -1,10 +1,16 @@
 package chap09;
+
+
 import java.util.Scanner;
 import java.util.Arrays;
+
+
 public class DayTester2 {
   public static void main(String[] args) {
-    Day day = new Day(2999, 9,01);
+
     Scanner stdIn = new Scanner(System.in);
+    Day day = new Day(2999, 9,01);
+    
     System.out.printf("あなたの誕生日は、%d年%d月%d日です", day.getYear(), day.getMonth(), day.getDate());
     String[] wd = {"日" + "月" + "火" + "水" + "木" + "金" + "土" + "日" };
     System.out.print("曜日は何個:　");

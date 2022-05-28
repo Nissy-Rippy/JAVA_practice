@@ -11,6 +11,7 @@ public class Day {
     this.month = month;
     this.date = date;
   }
+  
   public int getYear() {return this.year; }
   public int getMonth() {return this.month; }
   public int getDate() {return this.date; }
@@ -24,6 +25,7 @@ public class Day {
    this.month = month;
    this.date = date;
 }
+
 public int dayOfWeek() {
   int y = year;
   int m = month;

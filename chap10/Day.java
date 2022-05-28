@@ -1,13 +1,17 @@
 package chap10;
 
 public class Day {
+
   public static int counter = 0;
+
   private int year;
   private int month;
   private int date;
   private int id;
-   static { counter = 4 + 4; }
-          { id = ++counter; }
+
+   static { counter = 4 + 4; }  //初期子　システムではじめの一回のみ行われる機能
+          { id = ++counter; }   //インスタンス初期　新しくインスタンスができるたびに行われるコード
+
   Day() { set(1,1,1); }
   Day(int year) { set(year, 1, 1); }
   Day(int year, int month) { set(year, month, 1); }

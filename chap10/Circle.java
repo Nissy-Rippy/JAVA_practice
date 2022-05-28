@@ -1,6 +1,7 @@
 package chap10;
 
 public class Circle {
+  
   private Point2D center;
   private int radius = 0;
 

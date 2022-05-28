@@ -1,6 +1,7 @@
 package chap10;
 
 public class Point2D {
+  
   private int x = 0;
   private int y = 0;
   
