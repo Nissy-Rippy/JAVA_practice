@@ -9,6 +9,7 @@ public class Day {
   private int date;
   private int id;
 
+
    static { counter = 4 + 4; }  //初期子　システムではじめの一回のみ行われる機能
           { id = ++counter; }   //インスタンス初期　新しくインスタンスができるたびに行われるコード
 
@@ -24,7 +25,7 @@ public class Day {
   public void setYear(int year) {this.year = year;}
   public void setMonth(int month) {this.month = month;}
   public void setDate(int date) {this.date = date;}
-  
+
   public void set(int year, int month, int date) {
     this.year = year;
     this.month = month;
