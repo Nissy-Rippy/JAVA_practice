@@ -1,6 +1,7 @@
 package chap12;
 
 class A{
+  
   private int a;
   A() { a = 50; }
   public int getA() { return this.a; }
