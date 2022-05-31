@@ -9,7 +9,8 @@ public class Day {
   private int date;
   private int id;
 
-
+  // static {counter = 4 + 5; }
+  //        {id = ++counter; }
    static { counter = 4 + 4; }  //初期子　システムではじめの一回のみ行われる機能
           { id = ++counter; }   //インスタンス初期　新しくインスタンスができるたびに行われるコード
 

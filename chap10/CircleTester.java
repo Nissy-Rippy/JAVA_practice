@@ -2,6 +2,8 @@ package chap10;
 
 public class CircleTester {
   public static void main (String[] args) {
+    
+    Point2D[] pp = new Point2D[] {new Point2D(3,2), new Point2D(5,4), new Point2D(4,5)};
     Point2D[] p = new Point2D[] {
       new Point2D(3,7),
       new Point2D(4,6),
@@ -17,7 +19,7 @@ public class CircleTester {
       System.out.println("c1 = " + c1.toString());
       System.out.println("c2 = " + c2.toString());
     
-      
+
 
   }
 }

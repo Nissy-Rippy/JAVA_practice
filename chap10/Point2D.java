@@ -15,6 +15,6 @@ public class Point2D {
   public void setX(int x) { this.x = x; }
   public void setY(int y) { this.y = y; }
   public void set(int x , int y) { setX(x); setY(y); }
-  public String toString() { return "( " + x + "," +  y + ")"; };
+  public String toString() { return "( " + x + "," +  y + ")"; }
 
 }

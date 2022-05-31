@@ -3,6 +3,7 @@ import java.util.Scanner;
 
  class DateTester {
   public static void main(String[] args) {
+    
     Scanner stdIn = new Scanner(System.in);
     String[] wd = {"月", "火", "水", "木", "金", "土", "日"};
     System.out.println("誕生日を西暦で入力せよ");

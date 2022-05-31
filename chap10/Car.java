@@ -1,6 +1,7 @@
 package chap10;
 
 public class Car {
+  
   private String name;
   private int width;
   private int height;
