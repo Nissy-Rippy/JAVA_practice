@@ -1,7 +1,9 @@
 package chap15;
 import java.util.Scanner;
 
+//継承する
 class CheckedException extends Exception {
+
   CheckedException(String s, Throwable e) { super(s, e); }
 }
 class UncheckedException extends RuntimeException {
@@ -9,6 +11,7 @@ class UncheckedException extends RuntimeException {
 }
 
 public class Abc {
+
   static void work(int sw) throws Exception {
     switch (sw) {
       case 1: throw new RuntimeException("非検査例外");
@@ -16,8 +19,8 @@ public class Abc {
     }
   }
 
-static void test(int sw) throws CheckedException {
-  try {
+  static void test(int sw) throws CheckedException {
+   try {
     work(sw);
   } catch (RuntimeException e) {
     throw new UncheckedException("非検査例外対処不能", e);

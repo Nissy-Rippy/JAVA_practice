@@ -1,7 +1,6 @@
 package chap15;
 import java.util.Scanner;
 
-import javax.management.RuntimeErrorException;
 
  class ReverseArray {
   
@@ -13,7 +12,7 @@ import javax.management.RuntimeErrorException;
   static void reverse(int[] a) {
    try{
     for (int i = 0; i < a.length / 2; i++) {
-      swap(a, i, a.length - i);
+      swap(a, i, a.length - 1 - i);
     }
   } catch (ArrayIndexOutOfBoundsException e) {
     throw new RuntimeException("これは.reverseのバグかな？？", e);
@@ -26,8 +25,7 @@ import javax.management.RuntimeErrorException;
    int[] x = new int[num];
 
    for (int i = 0; i < num; i++) {
-     System.out.print("x[" + i + "] : " + x[i]);
-     x[i] = stdIn.nextInt();
+     System.out.print("x[" + i + "] : ");   x[i] = stdIn.nextInt();
    }
 
    try{
@@ -38,8 +36,8 @@ import javax.management.RuntimeErrorException;
        
      }
    } catch (RuntimeException e) {
-     System.out.println("例外         : " + e);
-     System.out.println("例外の原因   : " + e.getCause());
+     System.out.println( "例外         : " + e );
+     System.out.println( "例外の原因   : " + e.getCause() );
    }
  }
 

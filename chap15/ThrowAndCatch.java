@@ -1,4 +1,5 @@
 package chap15;
+
 import java.util.Scanner;
 
 
@@ -17,13 +18,14 @@ public class ThrowAndCatch {
   }
 
   public static void main(String[] args) {
+
     Scanner stdIn = new Scanner(System.in);
     System.out.print("sw : ");
     int sw = stdIn.nextInt();
     try {
       test(sw);
     } catch (Exception e) {
-      System.out.println(e.getMessage());
+      System.out.println( e.getMessage()  );
     }
   }
 }
