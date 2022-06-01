@@ -1,6 +1,8 @@
 package chap14;
 
-public interface Wearable {
+public interface Wearrable {
+
    void putOn();
    void putOff();
+   
 }
