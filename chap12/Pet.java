@@ -4,7 +4,7 @@ class Pet {
 
   private String name;
   private String masterName;
-
+//こんすとらくた―
   public  Pet(String name, String masterName) { this.name = name; this.masterName = masterName; }
 //ゲッター
   public String getName() { return this.name; }

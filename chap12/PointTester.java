@@ -5,7 +5,8 @@ class Point2D{
   private int x;
   private int y;
   //コンストラクタ
-public Point2D (int x, int y) { this.x = x ; this.y = y; }
+  
+  public Point2D (int x, int y) { this.x = x ; this.y = y; }
 
   public void setX(int x) { this.x = x; }
   public void setY(int y) { this.y = y; }
@@ -15,6 +16,7 @@ public Point2D (int x, int y) { this.x = x ; this.y = y; }
 
 class Point3D extends Point2D{
 private int z;
+
 public Point3D(int x, int y, int z) { super(x, y); this.z = z; }
 // public Point3D(int x, int y, int z) {super(x, y); this.z = z; } 親クラスの継承の際は親の部分はsuperで書き換えることが出来る。
  public void setZ(int z) { this.z = z; }
