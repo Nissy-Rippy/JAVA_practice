@@ -28,6 +28,7 @@ public class Abc {
     throw new CheckedException("検査例外対処不能", e);
   }
 }
+
   public static void main(String[] args) {
     Scanner stdIn = new Scanner(System.in);
     System.out.print("sw : ");

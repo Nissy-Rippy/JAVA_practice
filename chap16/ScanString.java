@@ -10,6 +10,7 @@ public class ScanString {
       System.out.println("s[" + i + "] = " + s.charAt(i));
     }
   }
+  
   StringBuilder s2 = new StringBuilder("ABC");
 //   s2.append("DEF"); s2.append("ofofo");
 //   s2.insert(4, 3.12); s.insert(3, 432);

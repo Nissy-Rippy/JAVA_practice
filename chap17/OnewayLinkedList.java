@@ -5,18 +5,23 @@ import java.util.Currency;
 class Node {
   public Node next;
   public int data;
-  Node (int data, Node next) { this.next = next; this.data = data; }
+
+  public Node (int data, Node next) { this.next = next; this.data = data; }
+
   public void displayNode() { System.out.print(" { " + data + " }  -> "); }
 }
 
 
 public class OnewayLinkedList {
+
    public Node head;
+     //コンストラクタ
    public OnewayLinkedList() { head  = null; }
+
    public void addFirst(int data) { head = new Node(data, head); }
    public void addLast(int data) {
-     if (head == null){ addFirst(data); }
-     else{
+     if (head == null) { addFirst(data); }
+       else{
        Node tmp = head;
        while(tmp.next != null) tmp = tmp.next;
        tmp.next = new Node(data, null);

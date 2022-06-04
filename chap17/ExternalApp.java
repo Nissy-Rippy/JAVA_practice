@@ -6,7 +6,9 @@ public class ExternalApp {
     String cmd = "calc"; 
     // String cmd = "cmd /c start cmd.exec /K test"; バッチを使うとｋのコマンド
     System.out.println("cmd = " + cmd);
+
     Runtime runtime = Runtime.getRuntime();
+    //exec で　実行するコマンド
     try{ 
       runtime.exec( cmd );
     } catch (Exception e) { System.out.println(e); }
