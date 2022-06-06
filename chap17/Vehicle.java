@@ -1,6 +1,7 @@
 package chap17;
 
 public class Vehicle {
+
   public static int counter = 0;
   private int id;
   private int fuel = 100;
@@ -8,8 +9,12 @@ public class Vehicle {
   private int length;
   private int height;
   private int distance;
+  
+//初期子
   { id = ++counter; }
+//コンストラクタ
   public Vehicle () { }
+
   public Vehicle (int length, int height, int fuel, int value) {
     this.length = length; this.height = height; this.fuel = fuel; this.value = value;
   }

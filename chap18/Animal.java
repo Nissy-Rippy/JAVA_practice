@@ -1,6 +1,7 @@
 package chap18;
 
 public enum Animal {
+  
   CAY(1000) {
     @Override
     void advertise() {

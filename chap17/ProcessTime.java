@@ -1,6 +1,7 @@
 package chap17;
 
 public class ProcessTime {
+
   public static void main(String[] args) {
     
     long start = System.nanoTime();
@@ -9,9 +10,9 @@ public class ProcessTime {
     System.out.println("for loop     : " + (end -start) + "(nsec)");
     
     start = System.nanoTime();
-    int i = 0; while(i < 10000) { ; i++; }
+    int i = 0; while(i < 1000) { ; i++; }
     end = System.nanoTime();
-    System.out.println("while loop  :" + (end -start) + "(nsec)");
+    System.out.println("while loop  : " + (end -start) + "(nsec)");
 
     start = System.nanoTime();
     i = 0; do { ; i++; } while(i < 1000);

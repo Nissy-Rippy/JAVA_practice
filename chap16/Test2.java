@@ -1,6 +1,7 @@
 package chap16;
  
 public class Test2 {
+
   static void printStringArray(String[] s) {
     for (int i = 0; i < s.length; i++)
       System.out.println("No." + i + " = " + s[i]);
@@ -12,4 +13,5 @@ public class Test2 {
     System.out.println("ジャンケンのて");
     printStringArray(hands);
   }
+  
 }

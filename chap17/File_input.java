@@ -5,7 +5,8 @@ import java.io.*;
 public class File_input {
 
    public static void main(String[] args) {
-     int MAX = 20;
+    
+    int MAX = 20;
      int[] rand_number = new int[MAX];
 
      try{
@@ -13,6 +14,7 @@ public class File_input {
        File file = new File("random_20.txt");
        BufferedReader br = new BufferedReader(new FileReader(file));
        String s;
+       
        while ((s = br.readLine()) != null) {
          String[] str = s.split(",");
          for(int i = 0; i < str.length; i++) rand_number[i] = Integer.parseInt(str[i]);

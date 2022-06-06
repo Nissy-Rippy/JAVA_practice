@@ -9,6 +9,7 @@ import java.util.Scanner;
     a[ab1] = a[ab2];
     a[ab2] = t;
   }
+  
   static void reverse(int[] a) {
    try{
     for (int i = 0; i < a.length / 2; i++) {
@@ -33,7 +34,6 @@ import java.util.Scanner;
      System.out.println("要素のあたいをリバースさせました！！");
      for (int i = 0; i < num; i++) {
        System.out.println("x[" + i + "] = " + x[i]);
-       
      }
    } catch (RuntimeException e) {
      System.out.println( "例外         : " + e );
