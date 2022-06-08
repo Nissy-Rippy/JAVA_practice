@@ -2,12 +2,13 @@ package chap18;
 
 public enum Animal {
   
-  CAY(1000) {
+  CAT(1000) {
     @Override
     void advertise() {
       System.out.println("まっかなりんごがなんと！！！" + getPrice() + " 円です！");
     }
   },
+
    DOG(3990){
      @Override
      void advertise() {
@@ -24,6 +25,7 @@ public enum Animal {
 
 
   private int price;
+  
   private Animal(int price) { this.price = price; }
 
   public int getPrice(){ return this.price; }
