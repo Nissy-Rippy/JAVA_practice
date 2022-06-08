@@ -4,9 +4,11 @@ import java.util.*;
 import java.util.List;
   
 public class Class {
+
   public static void animal(Animal animal) {
     System.out.println(animal);
   }
+  
   public static void desert(Desert desert) {
     System.out.println(desert);
   }
