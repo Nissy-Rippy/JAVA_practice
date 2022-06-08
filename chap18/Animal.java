@@ -1,5 +1,7 @@
 package chap18;
-
+//変数にすることはできる。
+// Animal animal = new Animal();はできないけれど
+// Animal animal = Animal.CAT.getPrice();はできる
 public enum Animal {
   
   CAT(1000) {
@@ -8,7 +10,7 @@ public enum Animal {
       System.out.println("まっかなりんごがなんと！！！" + getPrice() + " 円です！");
     }
   },
-
+ 
    DOG(3990){
      @Override
      void advertise() {

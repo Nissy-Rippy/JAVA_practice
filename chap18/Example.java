@@ -22,6 +22,9 @@ public class Example {
 //import の宣言のおかげでこれが可能になっている。
     Inner1 in = new Inner1();
 
+
+    Sport.Soccer.club();
+    Sport.BaseBall.club();
     
   }
 }
