@@ -1,4 +1,5 @@
 package chap18;
+
 import java.util.Set;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -10,8 +11,11 @@ public class Setclass {
 
    set1.add("スイカ");
    set1.add("メロン");
+   //contains の値はbooleanでtrue か falseで戻り値
+
    set1.contains("メロン");
    set1.contains("スイカ");
+   //要素の長さ
    set1.size();
 
    

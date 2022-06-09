@@ -19,6 +19,7 @@ public class Class {
     Outer1.Inner1 oi = new Outer1.Inner1();
 
 
+//内部クラス
      Human human = new Human();
      Human.Human_Leg leg = human.new Human_Leg();
 
@@ -45,14 +46,14 @@ public class Class {
     System.out.println(Animal.valueOf("DOG"));
     Animal ani = Animal.valueOf("CAY");
     System.out.println(ani);
-    System.out.println(Animal.CAY.ordinal());
+    System.out.println(Animal.CAT.ordinal());
 
     System.out.println(Desert.APPLE.getPrice());
     System.out.println(Desert.ICE_CREAM.getPrice());
     System.out.println(Desert.CAKE.getPrice());
 
     Animal.DOG.advertise();
-    Animal.CAY.advertise();
+    Animal.CAT.advertise();
     Animal.GORIRA.advertise();
   }
 }

@@ -1,6 +1,8 @@
 package chap18;
+
 import java.util.List;
 import java.util.ArrayList;
+
 
 public class Chapter14 {
   public static void main(String... args){
@@ -13,6 +15,7 @@ public class Chapter14 {
     list1.add(py);
     Chapter14.partyAttack(list1);
   }
+  
   public static void partyAttack(List<Character> party) {
     for (Character member : party) {
       int hp = member.attack();
