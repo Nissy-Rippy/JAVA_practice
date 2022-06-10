@@ -1,6 +1,6 @@
 package chap19;
-@Functional
 
+@FunctionalInterface
 public interface Functional {
   public static final int count = 0;
   public static void pickUp() { System.out.println("ooioziityan"); }
