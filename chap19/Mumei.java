@@ -33,6 +33,9 @@ public class Mumei {
         return Integer.compare(x, y);//Integer.compare(x,y);
       }
     });
+
+    Collections.sort(numbers, (x, y) -> Integer.compare(x, y) );
+    Comparator<Integer> c = Integer::compare;
     
     System.out.println(numbers);
 
@@ -60,11 +63,14 @@ public class Mumei {
     System.out.println(a.hello());
 
     Gori gori = new Gori() {
+
       @Override
       public String hello() { return "こんにちはんんんん！"; }
+
       @Override
       public int num() { return 33; }
     };
     System.out.println(gori.num());
+
   }
 }

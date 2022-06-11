@@ -28,6 +28,10 @@ public class Practice {
 
     Greeting greeting1 = (String word)-> { return "こんにちはー！"; };
 
+    Greeting gr = word -> word;
+
+    System.out.println(gr.hello("gorioooooooo"));
+
     System.out.println(greeting1.hello("konnbannha"));
 
     Greeting greeting = (String word) -> {
@@ -43,6 +47,9 @@ public class Practice {
     (Integer x, Integer y) -> { return Integer.compare(x, y); }
     );
 
+    Collections.sort(list1,
+    (x, y) -> Integer.compare(x, y)
+    );
     System.out.println(list1);
     System.out.println(list3);
 

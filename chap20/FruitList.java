@@ -20,6 +20,7 @@ public class FruitList {
         filter.add(list);
       }
     }
+
     List<Fruit> order = new ArrayList<>();
     for (Fruit filt : filter) {
       order.add(filt.order(20));
@@ -52,3 +53,42 @@ public class FruitList {
     System.out.println(list11);
   }
 }
+
+// (引数) -> {処理}
+// 条件に応じ省略した記法を用いる。次のサンプルを用いて省略のしかた。
+
+// // サンプル1
+// (Integer x, Integer y) -> {
+//   return x + y;
+// };
+// // サンプル2
+// (Integer x) -> {
+//   return x * 5;
+// };
+
+// 引数の型
+// 引数の型は省略
+
+// // サンプル1
+// (x, y) -> {
+//   return x + y;
+// };
+// 括弧 {} と return
+// 括弧 {}内の処理が1行の場合、{} と return は省略できます。ただし、片方のみならず両方とも省略する必要がある
+
+// // サンプル1
+// (Integer x, Integer y) -> x + y;
+// 括弧 ()
+// 括弧 () は引数が1つの場合、型とともに省略できる
+
+// // サンプル2
+// x -> {
+//   return x * 5;
+// };
+
+// // サンプル1
+// (x, y) -> x + y;
+
+
+// // サンプル2
+// x -> x * 5;
