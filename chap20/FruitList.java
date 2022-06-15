@@ -7,41 +7,44 @@ import java.util.stream.Collectors;
 
 public class FruitList {
   public static void main(String[] args) {
+    //String[]みたいに配列を作るよりも、Listを使って配列を作った方が使いやすく便利である
     List<Fruit> list1 = new ArrayList<>();
     list1.add(new Fruit("りんご", 63));
     list1.add(new Fruit("なし", 14));
     list1.add(new Fruit("パイナップル", 40));
     list1.add(new Fruit("ぶどう", 439));
     list1.add(new Fruit("マスカット", 6));
-
+//50個以下のものをピックアップする
     List<Fruit> filter = new ArrayList<>();
     for (Fruit list : list1) {
       if (list.quantity <= 50) {
         filter.add(list);
       }
     }
-
+//50以下のものに追加で20個追加してあげる。
     List<Fruit> order = new ArrayList<>();
     for (Fruit filt : filter) {
       order.add(filt.order(20));
     }
+    //商順に並べ替える
     order.sort(new Comparator<Fruit>() {
       @Override
       public int compare(Fruit x, Fruit y) {
         return x.quantity - y.quantity;
       }
     });
-
+//最後にひとつずつ出力する
     for (Fruit fruit : order) {
       System.out.println(fruit);
     }
+//上記の動きをstream形式でまとめると
 
     list1.stream()
     .filter(f -> f.quantity <= 10)
     .map(f -> f.order(20))
     .sorted((f1, f2) -> f1.quantity - f2.quantity)
     .forEach(System.out::println);
-
+//stream形式で値を変数に代入することもできる。
    long count = list1.stream()
     .filter(f -> f.quantity <= 10)
     .count();
@@ -74,7 +77,7 @@ public class FruitList {
 //   return x + y;
 // };
 // 括弧 {} と return
-// 括弧 {}内の処理が1行の場合、{} と return は省略できます。ただし、片方のみならず両方とも省略する必要がある
+// 括弧 {}内の処理が1行の場合、{} と return は省略できる。ただし、片方のみならず両方とも省略する必要がある
 
 // // サンプル1
 // (Integer x, Integer y) -> x + y;

@@ -99,8 +99,8 @@ public class Fruit2 {
 
 // 中間操作 
 
-// filter:要素を条件で絞り込む 
-// map:要素を変換する 
+// filter: 要素を条件で絞り込む 
+// map: 要素を変換する 
 // mapToInt:要素をInteger型に変換する 
 // mapToLong:要素をLong型に変換する 
 // mapToDouble:要素をDouble型に変換する 

@@ -12,6 +12,7 @@ public class TimeAccount {
   public TimeAccount (String n, String num, long z, long timeBalance) {
     this.name = n; this.no = num; this.balance = z; this.timeBalance = timeBalance;
   }
+  
   //ゲったー
   public String getName() { return this.name; }
   public String getNo() { return this.no; }
