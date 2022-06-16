@@ -1,4 +1,6 @@
 package chap21;
+
+
 import java.util.Set;
 import java.util.HashSet;
 
@@ -43,6 +45,7 @@ public class NoHero {
 
     heroo.remove(h2);
     System.out.println("要素数: " + heroo.size() );
+    //削除できないのはHashの仕組みに関係があるのである。
 
     Set<Hero> hash = new HashSet<>();
 
@@ -50,13 +53,17 @@ public class NoHero {
     h3.name = "gori";
     h3.hp = 2;
     hash.add(h3);
-    System.out.println(h3.size());
-
+    System.out.println(hash.size());
+    System.out.println(hash.hashCode());
+    System.out.println(h3.name + h3.hp);
     h3 = new Hero();
     h3.name = "gori";
     h3.hp = 2;
+    System.out.println(hash.hashCode());
+    System.out.println(h3.name + h3.hp);
+
     hash.remove(h3);
-    System.out.println(h3.size());
+    System.out.println(hash.size());
 
   }
 }
