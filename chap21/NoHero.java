@@ -40,9 +40,23 @@ public class NoHero {
     h2 = new Hero();
     h2.name = "abc";
     //要素の中身は同じなのにまたもや削除することが出来ない！！なぜだ～というと
-    
+
     heroo.remove(h2);
     System.out.println("要素数: " + heroo.size() );
+
+    Set<Hero> hash = new HashSet<>();
+
+    Hero h3 = new Hero();
+    h3.name = "gori";
+    h3.hp = 2;
+    hash.add(h3);
+    System.out.println(h3.size());
+
+    h3 = new Hero();
+    h3.name = "gori";
+    h3.hp = 2;
+    hash.remove(h3);
+    System.out.println(h3.size());
 
   }
 }
