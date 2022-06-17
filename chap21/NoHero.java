@@ -52,9 +52,11 @@ public class NoHero {
     Hero h3 = new Hero();
     h3.name = "gori";
     h3.hp = 2;
+
     hash.add(h3);
-    System.out.println(hash.size());
     System.out.println(hash.hashCode());
+
+    System.out.println(hash.size());
     System.out.println(h3.name + h3.hp);
     h3 = new Hero();
     h3.name = "gori";
