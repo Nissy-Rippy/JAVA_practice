@@ -19,27 +19,26 @@ public class NoHero {
     System.out.println("正しい判定: " + Arrays.equals(a, b) );
 
 
-
     List<Hero> hero = new ArrayList<>();
-    Hero h1 = new Hero();
+    Hero h1 = new Hero("みなこ");
     h1.name = "みなと";
     hero.add(h1);// hero.add(h1.name = "みなと");
     System.out.println(hero);
     System.out.println("要素数 = " + hero.size());
 
-    h1 = new Hero();
+    h1 = new Hero("みなと");
     h1.name = "みなと";
     // 同じ、みなととして削除しているはずなのに実際のところしっかりと削除することが出来ていない。そのため、要素数は1から1のまま！！！
     hero.remove(h1);
     System.out.println("要素数 = " + hero.size());
 
     Set<Hero> heroo = new HashSet<>();
-    Hero h2 = new Hero();
+    Hero h2 = new Hero("ペペ子");
     h2.name = "abc";
     heroo.add(h2);
     System.out.println("要素数: " + heroo.size() );
 
-    h2 = new Hero();
+    h2 = new Hero("pero");
     h2.name = "abc";
     //要素の中身は同じなのにまたもや削除することが出来ない！！なぜだ～というと
 
@@ -49,7 +48,7 @@ public class NoHero {
 
     Set<Hero> hash = new HashSet<>();
 
-    Hero h3 = new Hero();
+    Hero h3 = new Hero("北アルプスのゴリラ");
     h3.name = "gori";
     h3.hp = 2;
 
@@ -58,7 +57,7 @@ public class NoHero {
 
     System.out.println(hash.size());
     System.out.println(h3.name + h3.hp);
-    h3 = new Hero();
+    h3 = new Hero("ぴえんにだ");
     h3.name = "gori";
     h3.hp = 2;
     System.out.println(hash.hashCode());
@@ -66,6 +65,7 @@ public class NoHero {
 
     hash.remove(h3);
     System.out.println(hash.size());
+
 
   }
 }

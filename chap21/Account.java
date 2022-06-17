@@ -1,6 +1,7 @@
 package chap21;
-import java.lang.Comparable;
 
+import java.lang.Comparable;
+//ここで、comparableを実装しておくことによって,Collections.sort(list);を可能にすることが出来る。
 public class Account implements Comparable<Account> {
 
   private static int accountNum;
@@ -9,8 +10,7 @@ public class Account implements Comparable<Account> {
   private int number;
   public int zandaka;
 
-  static {  accountNum = 5 * 10; }
-  { ++id; accountNum++; }
+  
   public Account() { }
   public Account(String name) { this.name = name; }
 
