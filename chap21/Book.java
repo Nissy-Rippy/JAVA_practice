@@ -1,5 +1,6 @@
 package chap21;
 
+import java.util.Objects;
 import java.lang.Cloneable;
 import java.lang.Comparable;
 import java.util.*;
@@ -7,18 +8,17 @@ import java.util.*;
 public class Book implements Comparable<Book>, Cloneable{
 
   private String title;
-  private Date publishDate;
+  private int publishDate;
   private String comment;
 
   public String getTitle() { return this.title; }
-  public Date getDate(int publishDate) { return new Date(publishDate); }
+  public int getDate() { return new Date().getPublishDate(); }
   public String getComment() { return this.comment; }
   
   public void setTitle(String title) { this.title = title; }
-  public void setDate(int publishDate) { this.publishDate = new Date(publishDate); }
+  public void setDate(Date publishDate) { this.publishDate = new Date().getPublishDate(); }
   public void setComment(String comment) { this.comment = comment; }
   
-  public int compare()
 
   public boolean equals(Object o) {
     if(o == this.title) { return true; }
@@ -26,13 +26,13 @@ public class Book implements Comparable<Book>, Cloneable{
     if ( o == null ) { return false; }
     if (!(o instanceof Date)) { return false; }
     Date r = (Date)o;
-    if (!this.title.trim().equals(r.getPublishDate.trim())) { return false; }
+    if (!this.title.trim().equals(r.getPublishDate())) { return false; }
     return true;
   }
 
-  public int compare(Date obj) {
-    if (this.publishDate < obj.publishDate) { return 1; }
-    if (this.publishDate > obj.publishDate) { return -1; }
+  public int compareTo(Date obj) {
+    if (this.publishDate < obj.getPublishDate() ) { return 1; }
+    if (this.publishDate > obj.getPublishDate() ) { return -1; }
     return 0;
   }
 
@@ -40,8 +40,15 @@ public class Book implements Comparable<Book>, Cloneable{
     Book b = new Book();
     b.title = this.title;
     b.comment = this.comment;
-    b.publishDate = new Date().clone();
+    b.publishDate = new Date().clone().getPublishDate();
     return b;
+  }
+  public int hashCode() {
+    return Objects.hash(this.title, this.publishDate, this.comment);
+  }
+
+  public String toString() {
+    return "本のタイトル: " + this.title + " ほんの出版日" + this.publishDate + "  本のコメント" + this.comment;
   }
 
 }
