@@ -1,22 +1,22 @@
 package chap21;
-
+import java.util.Arrays;
 import java.util.Objects;
 import java.lang.Cloneable;
-import java.lang.Comparable;
+// import java.lang.Comparable;
 import java.util.*;
 
 public class Book implements Comparable<Book>, Cloneable{
 
   private String title;
-  private int publishDate;
+  private Date publishDate;
   private String comment;
 
   public String getTitle() { return this.title; }
-  public int getDate() { return new Date().getPublishDate(); }
+  public Date getPublishDate() { return new Date().getPublishDate(); }
   public String getComment() { return this.comment; }
   
   public void setTitle(String title) { this.title = title; }
-  public void setDate(Date publishDate) { this.publishDate = new Date().getPublishDate(); }
+  public void setDate(int publishDate) { this.publishDate = new Date().getPublishDate(); }
   public void setComment(String comment) { this.comment = comment; }
   
 
@@ -30,7 +30,7 @@ public class Book implements Comparable<Book>, Cloneable{
     return true;
   }
 
-  public int compareTo(Date obj) {
+  public int compareTo(Book obj) {
     if (this.publishDate < obj.getPublishDate() ) { return 1; }
     if (this.publishDate > obj.getPublishDate() ) { return -1; }
     return 0;
