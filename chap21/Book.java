@@ -12,11 +12,11 @@ public class Book implements Comparable<Book>, Cloneable{
   private String comment;
 
   public String getTitle() { return this.title; }
-  public Date getPublishDate() { return new Date().getPublishDate(); }
+  public Date getPublishDate() { return this.publishDate; }
   public String getComment() { return this.comment; }
   
   public void setTitle(String title) { this.title = title; }
-  public void setDate(int publishDate) { this.publishDate = new Date().getPublishDate(); }
+  public void setPublishDate(Date publishDate) { this.publishDate = publishDate; }
   public void setComment(String comment) { this.comment = comment; }
   //書き忘れた！：ｗ：Objects.hash
   public int hashCode() { return Objects.hash(this.title, this.publishDate, this.comment); }
@@ -54,6 +54,9 @@ public boolean equals(Object o) {
 public int compareTo(Book o) {
   return this.publishDate.compareTo(o.publishDate);
 }
+
+//book.getPublishDate().equals(date.getPublishDate());
+
 //自分の回答
   // public Book clone() {
   //   Book b = new Book();
