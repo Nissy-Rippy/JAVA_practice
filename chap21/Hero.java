@@ -8,7 +8,7 @@ public class Hero implements Cloneable{
   public int hp;
   public Sword sword;
   //cloneのメソッドを用意しておくと便利
-
+  public Hero() { }
   public Hero(String name, Sword sword) { this.name = name; this.sword = sword; }
 
   public Hero clone(String name, String name1) {
