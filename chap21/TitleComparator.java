@@ -1,12 +1,11 @@
 package chap21;
+import java.util.Comparator;
 
-public class TitleComparator {
+public class TitleComparator implements Comparator<Book> {
   public static void main(String[] args) {
-    Book book = new Book();
-    Date date = new Date();
+  }
 
-    book.getPublishDate().equals(date.getPublishDate());
-
-    Collections.sort(book);
+  public int compare(Book o1, Book o2) {
+    return o1.getTitle().compareTo(o2.getTitle());
   }
 }

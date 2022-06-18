@@ -16,6 +16,9 @@ public class Date implements Cloneable{
   public Date getPublishDate2() {
     return null;
   }
+  public int compareTo(Date publishDate2) {
+    return 0;
+  }
   
 
 }
