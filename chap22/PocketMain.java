@@ -1,5 +1,5 @@
 package chap22;
-import chap21.Hero;1
+import chap21.Hero;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,6 +19,8 @@ public class PocketMain {
     List<String> s = Arrays.asList("hello", "world");
     List<Integer> i = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
     List<Hero> h = Arrays.asList( new Hero(), new Hero(), new Hero() );
+
+    
     
     }
 }
