@@ -10,9 +10,9 @@ public class Main {
     //これは、java.lang.Collectionsのcompare
     Collections.sort(list);
 
+    //これは匿名クラスを使っている例である!!
     // Collections.sort(list,
     // new Comparator<Account>() {
-    //   @Override
     //   public int compareTo(Account x, Account y) {
     //     return Integer.compare(x, y);
     //   }

@@ -33,5 +33,8 @@ package chap22;
 // }
 
 public class Pocket<E extends NoType> {
+
+  public void put(NoType noType) {
+  }
   
 }
