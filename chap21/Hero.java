@@ -1,8 +1,8 @@
 package chap21;
 
 import java.util.Objects;
-//import java.lang.Cloneable;基本的にjava.lang.のやつは宣言をわざわざしなくても平気である。
-
+  //import java.lang.Cloneable;基本的にjava.lang.のやつは宣言をわざわざしなくても平気である。
+  
 public class Hero implements Cloneable{
   public String name;
   public int hp;
