@@ -18,5 +18,11 @@ public class Test {
     System.out.println(f1.isOdd(3));
     System.out.println(f2.passCheck(3, "gorita"));
 
+    List<String> names = Arrays.asList("菅原拓真", "湊雄輔", "朝香あゆみ");
+    names.stream()
+         .filter(h -> h.length() <= 4)
+         .map(h -> h + "さん")
+         .forEach(System.out::println);
+    
   }
 }
