@@ -31,7 +31,7 @@ public class PracticeTest{
     b3.setPublishDate(f.parse("2018/06/24"));
     b3.setComment("明日五兵衛");
     books.add(b3);
-
+//引数に関数を受け取れる関数のことを、高階関数と呼ぶ
     Collections.sort(books, new TitleComparator());
 
     Collections.sort(books, new TitleComparator());
