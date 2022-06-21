@@ -11,7 +11,7 @@ public class PracticeTest{
     ArrayList<Book> books = new ArrayList<>();
     //SimpleDateFormat()の引数に自分の表示したいようにyyyy年mm月dd日にちを/で区切って形を作ってあげる。
     SimpleDateFormat f = new SimpleDateFormat("yyyy/mm/dd");
-    Book book = new Book();
+    Book book = new Book(); 
 
     Book b1 = new Book();
     b1.setTitle("java入門");

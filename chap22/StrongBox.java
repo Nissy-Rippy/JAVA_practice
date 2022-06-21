@@ -36,7 +36,6 @@ public class StrongBox<E> {
       break;
 
      }
-
      //施錠できた場合には、カウントを０にして戻す
      this.count = 0;
      return this.e;
