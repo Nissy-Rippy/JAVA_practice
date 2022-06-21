@@ -1,5 +1,9 @@
 package chap24;
+
 import java.util.*;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 import chap24.Func1;
 import chap24.FunM2;
 public class Test {
@@ -24,5 +28,18 @@ public class Test {
          .map(h -> h + "さん")
          .forEach(System.out::println);
     
+    List<String> aa = List.of("a", "b", "c");
+    Set<Integer> nn = Set.of(1,2,3,4,5);
+    Map<String, Integer> dd = Map.of("東京", 12, "京都", 21, "熊本", 32);
+    Stream<String> cc = Stream.of("x", "y", "s");
+
+    for(String a : aa) {
+      System.out.println(a);
+    }
+    // for ( m : mm) {
+    //   System.out.println(m);
+    // }
+
+    IntStream ff = Stream.of(1,2,3,4);
   }
 }
