@@ -8,10 +8,10 @@ public class SystemPro1 {
   public static void main(String[] args) {
 
     System.out.println("本日は\n晴天なり");
-
+    
+    //macでもwindowsでも同じ動きをするようになる
     final String f = System.lineSeparator();// これでもOK!!
-
-    final String BR = System.getProperty("line.separator");
+    final String BR = System.getProperty("line.separator");//上と同じ
 
     System.out.println("本日は" + BR + "晴天なり");
 
