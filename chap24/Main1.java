@@ -53,5 +53,7 @@ public class Main1 {
                                   .map(h -> h.name)//Heroから名前を取得する
                                   .collect(Collectors.toList());//リストとして取り出す！
 
+    System.out.println(noHpHero);
+
   }
 }
