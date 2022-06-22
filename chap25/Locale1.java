@@ -28,6 +28,7 @@ public class Locale1 {
     } else {
       System.out.println("夏時間を採用していません");
     }
+    
     System.out.print("世界標準時との時差は, ");
     System.out.println(tz.getRawOffset() / 3600000 + "時間である！");
 

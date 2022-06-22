@@ -5,6 +5,7 @@ import java.lang.ProcessBuilder;
 public class Exit {
 
   public static void main(String[] args) throws Exception {
+    
     System.out.println("計算を開始します!");
 
     System.out.println("計算を終了します.結果をメモ帳で表示します！");
