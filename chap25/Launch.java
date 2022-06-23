@@ -13,13 +13,22 @@ public class Launch {
     if (args.length != 2) {
       System.out.println("引数を二つ選択してください！");
       System.out.println("Launch one two");
+      args = new String[3];
+      args[0] = "chap25.Launch";
+      args[1] = "E";
+
     }
     System.out.println(args.length);
 
     String cmd1 = args[0];
     String cmd2 = args[1];
-    
-    
+
+    // Class<?> meClass = Class.forName("chap25.MemoryEater");
+    // Method me = meClass.getMethod("main", String[].class);
+    // MemoryEater me1 = (MemoryEater)newInstance();
+    // me.invoke(me1, "gori", "gorio", "goriri");
+    // MemoryEater.main(args);
+
     showMemory();//現在のメモリーの使用量
     // String cmd1 = args.getClass().getName();
     System.out.println(cmd1);
@@ -57,6 +66,10 @@ public class Launch {
 
   }
 
+    private static MemoryEater newInstance() {
+    return null;
+  }
+
     public static void launchExternal(Class<?> clazz) throws Exception {
       ProcessBuilder pb = new ProcessBuilder("java", clazz.getName());
       //javaを起動するときは 第一引数は　"java"でファイル名は実行したいクラスのFQCN名が必要
@@ -64,7 +77,17 @@ public class Launch {
       proc.waitFor();//プログラムの終了まで待つためのメソッド waitFor();
 
     }
-
+    public static void memoryExternal(Class<?> memoryEater) throws IOException, Exception {
+      ProcessBuilder me = new ProcessBuilder("java", memoryEater.getName() );
+      Process proc1 = me.start();
+      proc1.waitFor();
+      
+    }
+    public static void memoryInternal(Class<?> memoryEater) throws Exception {
+      Method m = memoryEater.getMethod("main", String[].class);
+      String[] args = {};
+      m.invoke(null, (Object)args);
+    }
     public static void launchInternal(Class<?> clazz) throws Exception {
       Method m = clazz.getMethod("main", String[].class);
       String[] args = {};
