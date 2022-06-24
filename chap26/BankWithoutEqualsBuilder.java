@@ -17,6 +17,9 @@ public class BankWithoutEqualsBuilder {
     return true;
   }
   
+
+
+  
   public String toString() {
     return "銀行の名前 " + this.name + "住所 " + this.address;
   }

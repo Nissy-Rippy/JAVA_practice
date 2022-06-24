@@ -14,7 +14,7 @@ public class BankUsingEqualsBuilder {
   }
 
   public int hashCode() {
-    return HashCodeBuilder.reflectionHashCode(this);//Bankクラスの全フィールドから、ハッシュ値を生成できるようになるらしい！
+    return HashCodeBuilder.reflectionHashCode(this);//Bankクラスの全フィールドから、ハッシュ値を生成できるようになるらしい！/*  */
   }
   
 }
