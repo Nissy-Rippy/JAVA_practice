@@ -15,7 +15,12 @@ public class Launch {
       System.out.println("Launch one two");
       args = new String[3];
       args[0] = "chap25.Launch";
-      args[1] = "E";
+      args[1] = "I";
+      // do {
+      //   System.out.print("内部接続か外部接続か選択してください！: <I>・・内部 / <E> ・・外部:  \n 注意）それ以外の場合打ち直し！");
+      //   args[1] = stdIn.nextLine();
+      //   System.out.println(args[1]);
+      // } while(args[1] !="E" && args[1] != "I");
 
     }
     System.out.println(args.length);
