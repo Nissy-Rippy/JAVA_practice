@@ -47,6 +47,7 @@ public class Main1 {
     
     
     //List<String>に代入する
+    
     List<String> noHpHero = heroes.stream()
                                   .filter(h -> h.hp ==0)//hp= 0の人を抽出する
                                   .limit(3)//最大3名まで

@@ -6,7 +6,9 @@ import java.util.stream.Stream;
 
 import chap24.Func1;
 import chap24.FunM2;
+
 public class Test {
+
 
   public static void main(String[] args) {
     Func1 odd = x -> x % 2 == 1;
