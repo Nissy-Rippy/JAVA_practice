@@ -42,6 +42,7 @@ public class Test {
     //   System.out.println(m);
     // }
 
-    IntStream ff = Stream.of(1,2,3,4);
+    try (IntStream ff = Stream.of(1,2,3,4)) {
+    }
   }
 }
