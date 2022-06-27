@@ -10,7 +10,7 @@ public class BankUsingEqualsBuilder {
   public boolean equals(Object o) {
     //reflectionsEquals はBankクラスが持つ全てのフィールドが等価であることを自動的に調べてくれるのである！
 
-    return EqualsBuilder.reflectionEquals(this.o);//この一行だけで済むようになる！
+    return EqualsBuilder.reflectionEquals(this, o);//この一行だけで済むようになる！
   }
 
   public int hashCode() {
