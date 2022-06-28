@@ -4,7 +4,7 @@ package review;
 public class Review2<E> {
 
   private E e;
-  private E keyType;
+  private KeyType keyType;
   private long count;
 
   public Review2(KeyType keyType) { this.keyType = keyType; }
@@ -27,9 +27,9 @@ public class Review2<E> {
       break;
       case FINGER:
       if (count < 1000000) { return null; }
+    }
       this.count = 0;
-      return this.keyType;
-  }
-}
+      return this.e;
+      }
 
 }
