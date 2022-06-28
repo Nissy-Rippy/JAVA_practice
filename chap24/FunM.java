@@ -59,6 +59,7 @@ public class FunM {
 
     // DoubleSupplier<Double> df = System::add;
     // System.out.println("改行します" + df.get());
+    System.out.println("これはどう？");
 
   }
 

@@ -3,19 +3,20 @@ package revieww;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.stream.Stream;
-import java.util.function.ToIntBiFunction;
-import java.util.function.IntBinaryOperator;
+// import java.util.stream.Stream;
+// import java.util.function.ToIntBiFunction;
+// import java.util.function.IntBinaryOperator;
 import java.util.function.BiFunction;//<String, string, String>最初の二つは引数、最後は戻り値
 import java.util.function.Supplier;//引数を受け取らず、戻り値のみ返す
 import java.util.function.Consumer;//引数だけを受け取り、戻り値がないvoidのような物
 import java.util.function.*;
-import java.util.stream.*;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.stream.Stream;
+// import java.util.stream.*;
+// import java.util.List;
+// import java.util.ArrayList;
+// import java.util.stream.Stream;
 
 public class Review3 {
+  private static int sum;
   // public static int back(int a, int b) {
   //   return a + a + b + b;
   // }
@@ -27,12 +28,14 @@ public class Review3 {
     int size = func1.apply("gorio!");
     System.out.println(size);
 
-    Consumer<String> cons = System.out::println;//Consumerは、Stringで　データ型は基本、IntConsumer, LongConsumer, DoubleConsumer,
+    Consumer<String> cons = System.out::println;//Consumerは、Stringでデータ型は基本、IntConsumer, LongConsumer, DoubleConsumer,
     cons.accept("gorioooo!");
 
     Supplier<String> sup = System::lineSeparator;//Supplierは基本String型で, データ型はIntSupplier, LongSupplierなど
     System.out.println("改行します！！" + sup.get());
-    
+    BiFunction<String, String, String> bi = (x, y) -> { return x +  " " + y; };
+    String ozi = bi.apply("石井", "まこと");
+    System.out.println(ozi);
     BiFunction<String, String, String> bifunc = System::getProperty;
     System.out.println(bifunc.apply("java.version", "不明"));//ToIntBiFunction, ToLongBiFunctionなどがある！
 
@@ -58,7 +61,11 @@ public class Review3 {
     System.out.println(is);
 
     int[] lists = {1,3,4,5,6,7,7};
-    Arrays.stream(lists).sum();
+    sum = Arrays.stream(lists).sum();
+    System.out.println("oo");
+    List<String> names = List.of("ozi", "oba", "oni", "imouto");
+    names.stream().filter(h -> h.length() < 4).forEach(e -> System.out.println(e + "さん"));
+    names.stream().filter(h -> h.length() < 4).map(h -> h + "さん").forEach(System.out::println);//同じ!！
 
   }
 }
