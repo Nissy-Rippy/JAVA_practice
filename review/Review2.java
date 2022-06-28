@@ -1,4 +1,4 @@
-package revieww;
+package review;
 
 
 public class Review2<E> {
