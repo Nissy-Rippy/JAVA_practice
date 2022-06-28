@@ -1,4 +1,4 @@
-package review;
+package revieww;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -45,6 +45,9 @@ class Hero implements Cloneable, Comparable<Hero>{
   public class Review1 {
 
   public static void main(String[] args) {
+
+    System.out.println("ゆううううう");
+
     List<Hero> heroes = new ArrayList<>();
     heroes.add(new Hero("gorio", 23));
     heroes.add(new Hero("gorio", 73));
@@ -54,5 +57,9 @@ class Hero implements Cloneable, Comparable<Hero>{
 
     Collections.sort(heroes);
     Collections.sort(heroes, new AgeComparator());
+
+    for (Hero hero : heroes) {
+      System.out.println(hero.toString());
+    }
   }
 }
