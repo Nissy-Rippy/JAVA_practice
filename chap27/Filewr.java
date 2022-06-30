@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.FileReader;
 
 public class Filewr {
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException, Exception{
     FileWriter fw = null;
     try{
     // true はデータの末尾からデータを追記していくfalse、省略の場合はファイルの先頭からデータを上書きしていきます
@@ -19,7 +19,8 @@ public class Filewr {
       if(fw != null) {
        try{
          fw.close();
-      } catch (IOException e) { System.out.println("ファイル閉じるのに失敗！");}
+      } catch (IOException e) { System.out.println("ファイル閉じるのに失敗！");
+    }
     }
   }
 
