@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.FileInputStream;
  public class BinaryFile1 {
   public static void main(String[] args) throws IOException {
-
+    
     try {
     FileOutputStream fos =
     new FileOutputStream("rpgsave.dat", true);
