@@ -16,10 +16,10 @@ public class Ozi {
   public static void main(String[] args) throws IOException, Exception {
     if (args.length != 2) {
       System.out.println("機動パラメーターの指定が不正です");
-      return;
+      
     }
 
-    String inFIle = args[0];
+    String inFile = args[0];
     String outFile = args[1];
     // FileInputStream fis = new FileInputStream(inFIle);
     // FileOutputStream fos = new FileOutputStream(outFile);
@@ -37,9 +37,10 @@ while ( i != -1) {
   gzos.write(i);
   i = fis.read();
 }
-gzos.fulsh();
+
+gzos.flush();
 } catch (IOException e) {
-  System.out.pritnln(e);
+  System.out.println("ファイル処理に失敗しました！");
 }
 
 
