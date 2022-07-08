@@ -22,7 +22,6 @@ public class SocketNet  {
   }
   sock.close();// 空けたら閉じる
 
-  
   }
 
 }
