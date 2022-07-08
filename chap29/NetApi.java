@@ -2,10 +2,10 @@ import java.net.*;
 import java.io.*;
 
 public class NetApi {
-  public static void main(String[] args) throws IOException, Exception {
+  public static void main(String[] args) throws IOException, Exception, MalformedURLException {
 
     URL url = new URL("https://dokojava.jp");// 引数一つだとString型のコンストラクタが用意されている。
-    InputStream is = url.openStream();// InputStream型で返す
+    InputStream is = url.openStream();// InputStream型で返す,InputStreamは、大体親のクラスでよく使われる
     InputStreamReader isr = new InputStreamReader(is);//
 
     int data = isr.read();// read()を呼び出して。ストリームからⅠバイトずつ情報を取り出す。初めの一文字を代入しておく
