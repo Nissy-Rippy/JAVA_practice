@@ -7,6 +7,8 @@ import java.util.*;
 
 public class Httpclient {
   public static void main(String[] args) {
+
+    
     //今回はew演算子を使わないでインスタンスを作る。
     //HttpClientクラスのnewBuilderメソッド使ってインスタンスを作り各種の設定メソッドを連鎖的に呼び出す。
     HttpClient client = HttpClient.newBuilder()//インスタンスの作成

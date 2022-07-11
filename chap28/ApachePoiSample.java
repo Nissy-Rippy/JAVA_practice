@@ -26,7 +26,7 @@ public class ApachePoiSample {
     try (InputStream is = new FileInputStream(IN_EXCEL_FILE_PATH);) {
       wb = WorkbookFactory.create(is);
     } catch (FileNotFoundException e) {
-      // 対象のExcelファイルが存在しない場合に発生
+    // 対象のExcelファイルが存在しない場合に発生
       e.printStackTrace();
     } catch (IOException e) {
       // 対象のExcelファイルの読み込みに失敗した場合に発生
