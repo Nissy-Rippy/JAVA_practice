@@ -1,5 +1,5 @@
 
-
+//jarファイルは別にある
 import org.apache.commons.*;
 import java.io.*;
 

@@ -18,7 +18,7 @@ class Hero implements Cloneable, Comparable<Hero>{
   }
 
   public String toString() {
-    return "名前: " + this.name + "　年齢： " + this.age + "ナンバー: " + this.no;
+    return "名前: " + this.name + "年齢： " + this.age + "ナンバー: " + this.no;
   }
   public int hashCode() {
     return Objects.hash(this.name,this.age,this.no);
