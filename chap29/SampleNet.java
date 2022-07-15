@@ -93,7 +93,7 @@ public class SampleNet {
   //       case 403:
   //         // エラー情報を出力させるためのコマンド
   //         ErrorResponse errorResponse = new ObjectMapper().readValue(body, ErrorResponse.class);
-  //         System.out.println("エラーメッセージ: " + errorResponse.error.message);
+  //         System.out.println("エラーメッセージ: " +  errorResponse.error.message);
   //         return null;
   //       default:
   //         return null;
