@@ -20,7 +20,7 @@ public class NetApi {
 
     URL url = new URL("https://dokojava.jp");// 引数一つだとString型のコンストラクタが用意されている。
     InputStream is = url.openStream();// InputStream型で返す,InputStreamは、大体親のクラスでよく使われる
-    InputStreamReader isr = new InputStreamReader(is);//
+    InputStreamReader isr = new InputStreamReader(is);//テキストの読み込みの際はInputStreamReaderのが早く読み込みをすることができるのでここで利用している
 
     int data = isr.read();// read()を呼び出して。ストリームからⅠバイトずつ情報を取り出す。初めの一文字を代入しておく
     while (data != -1) {
@@ -47,8 +47,9 @@ public class NetApi {
    
    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());//引数にHttpRequestと
    String body = res.body();
-   
-   int status = res.statusCode();
+
+   int status = res.statusCode();//statusコードをここで受け取っておく
+
    if (status == 200) {
     ObjectMapper mapper = new ObjectMapper();
     JsonNode root = mapper.readTree(body);
