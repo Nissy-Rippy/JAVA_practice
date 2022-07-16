@@ -16,11 +16,29 @@ Connection con = null;
 try {
 
 //ステップ１データベースの接続を行う！
-
     con = DriverManager.getConnection("jdbc:h2~/mydb");//JDBCのＵRLをここで指定する（自分でconsoleコマンドラインで作ったもの）
     //con = DriverManager.getConnection("jdbcj:h2~/mydb", ID, PW)パスワードとIDが必要な場合は、このように指定してあげる良い！
 
 //ステップ2は、後で学習のため今はこのままにしておく　　＝ Jarファイル内にあるドライバクラスをJVMに読み込ませ有効にする
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 } catch (SQLException e) {
     e.printStackTrace();
 } finally {
