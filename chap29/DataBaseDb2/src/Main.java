@@ -62,7 +62,28 @@ public class Main {
             pstmt2.executeUpdate();
             pstmt2.close();
 
+        //検索系SQL文の送信のコードの書き方！
 
+        //Step2 2-1 送信するためのひながたをつくる！
+        PreparedStatement pstmt3 = con.prepareStatement("SELECT * FROM MONSTERS WHERE HP >= ?");
+
+        //Step2 2-2 ひな型に情報を流して組み立てていく！？の部分！
+        pstmt3.setInt(1, 10); // 一番目の？の部分に10の値を入れている!
+        pstmt3.setInt(1, 20);
+
+        //Step2 2-3　組み立てたSql文をDBMSに送信するためのコード！(; ･`д･´)
+        ResultSet rs = pstmt3.executeQuery();// 更新系と違うのはここの部分！　Select文がデータベースに送られる！
+
+        //Step2 2-4 結果を処理するコード！　これは、後で触れるため今はこのまま！
+
+
+
+
+
+
+
+        rs.close();//組み立てたSql文を閉じる。空けたら閉じる！
+        pstmt3.close();//ひな型も閉じなければ不祥事につながる！(; ･`д･´)
 
 
 
