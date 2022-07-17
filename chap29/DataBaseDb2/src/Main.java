@@ -73,12 +73,26 @@ public class Main {
 
         //Step2 2-3　組み立てたSql文をDBMSに送信するためのコード！(; ･`д･´)
         ResultSet rs = pstmt3.executeQuery();// 更新系と違うのはここの部分！　Select文がデータベースに送られる！
+        //　↑、は注目している特定の1行の情報しか取り出すことが出来ない！
+
+
 
         //Step2 2-4 結果を処理するコード！　これは、後で触れるため今はこのまま！
+        while (rs.next()) { //next次にデータがあるならtrue  1列ずつ受け取る
+            System.out.println(rs.getString("NAME"));//文字列の場合はgetStringで受け取る
+        }
 
+        if (rs.next()) {//もし次の行が見つかるならば！
+            System.out.println("ゴブリンのＨＰは、" + rs.getInt("HP"));
+        } else {
+            System.out.println("ゴブリンはいませんでした！：ｗ：");
+        }
 
+        //  while (rs.next())  =>　検索結果の全行を順に処理していくというコード
+        //if (rs.next())       =>  検索結果が存在するかしないかというコード！で使われる
 
         
+
 
 
 
