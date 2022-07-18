@@ -136,6 +136,8 @@ public class Main {
         long l2 = ts2.getTime();//いったんtimestampからlongにそれからlongからdateに変換
         Date d2 = new Date(l2);    //Timestamp型とDate型を変換させるには一度long型を経由させる必要がある！
 
+        
+
 
 
 
