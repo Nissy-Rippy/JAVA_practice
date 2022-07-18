@@ -33,6 +33,8 @@ public class Main {
             con = DriverManager.getConnection("jdbc:h2:~/mydb", "sa", "");// JDBCのＵRLをここで指定する（自分でconsoleコマンドラインで作ったもの）
             // con = DriverManager.getConnection("jdbcj:h2~/mydb(データベース名)", ID(User名), PW何も設定してないときは空白を入れてあげる)パスワードとIDが必要な場合は、このように指定してあげる良い！
 
+            con.setAutoCommit(false); //このコードを打たないと、一文送るごとに自動的にコミットされる設定になっているのでトランザクッションを利用できない！！！
+
             // ステップ2 1-1 まず、送信するべきSQL分のひな型を準備する
             PreparedStatement pstmt = con.prepareStatement("DELETE FROM MONSTERS WHERE HP <= ? OR NAME = ?");//　?はパラメータ
             PreparedStatement pstmt2 = con.prepareStatement("DELETE FROM MONSTERS WHERE NAME <= ?");// ?はパラメータ
@@ -45,6 +47,9 @@ public class Main {
 
             //executeUpdate()メソッドは全ての更新系SQｌ分の送信に用いることが出来る便利！
             int r = pstmt.executeUpdate();//戻り値は、処理結果、実行件数！　送信
+
+            con.commit();//　トランザクションを利用しているときは、処理要求確定させるためのコミットを記載しないといけない！Autoじゃないから！
+            
 
             //（　＾ω＾）・・・パラメーターの数をしっかり合わせて記載しないとエラーが起きるので注意かも！
 
@@ -64,11 +69,13 @@ public class Main {
             pstmt2.executeUpdate();
             pstmt2.setString(1, "すずめ");
             pstmt2.executeUpdate();
+
+            con.rollback();// 送信済みの処理要求のキャンセル（ロールバック）させる
             pstmt2.close();
 
         //検索系SQL文の送信のコードの書き方！
 
-        //Step2 2-1 送信するためのひながたをつくる！
+        //Step2 2-1 送信するためのひながたをつくる！ fileでいうとこのタイミングでファイルを開く感覚、最後はclose()でとじないといけない
         PreparedStatement pstmt3 = con.prepareStatement("SELECT * FROM MONSTERS WHERE HP >= ?");
 
         //Step2 2-2 ひな型に情報を流して組み立てていく！？の部分！
@@ -76,10 +83,10 @@ public class Main {
         pstmt3.setInt(1, 20);
 
         //Step2 2-3　組み立てたSql文をDBMSに送信するためのコード！(; ･`д･´)
+        //fileでいうとこのタイミングでファイルを開く感覚、最後はclose()でとじないといけない
+  
         ResultSet rs = pstmt3.executeQuery();// 更新系と違うのはここの部分！　Select文がデータベースに送られる！
         //　↑、は注目している特定の1行の情報しか取り出すことが出来ない！
-
-
 
         //Step2 2-4 結果を処理するコード！　これは、後で触れるため今はこのまま！
         while (rs.next()) { //next次にデータがあるならtrue  1列ずつ受け取る
@@ -95,15 +102,8 @@ public class Main {
         //  while (rs.next())  =>　検索結果の全行を順に処理していくというコード
         //if (rs.next())       =>  検索結果が存在するかしないかというコード！で使われる
 
-
-
         rs.close();//組み立てたSql文を閉じる。空けたら閉じる！
         pstmt3.close();//ひな型も閉じなければ不祥事につながる！(; ･`д･´)
-
-
-
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -121,6 +121,7 @@ public class Main {
         // これが基本パターン！
 
 
+
         //PreparedStatementで、パラーメータとして日時情報を指定するには
         //setTimestamp()を使う
 
@@ -135,11 +136,6 @@ public class Main {
         java.sql.TimeStamp ts2 = rs.getTimestamp(1); //new Date()のデータベース版みたいなもの！
         long l2 = ts2.getTime();//いったんtimestampからlongにそれからlongからdateに変換
         Date d2 = new Date(l2);    //Timestamp型とDate型を変換させるには一度long型を経由させる必要がある！
-
-        
-
-
-
 
 
 
