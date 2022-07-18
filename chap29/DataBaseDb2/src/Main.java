@@ -1,4 +1,8 @@
+import java.util.Calendar;
+import java.util.Date; //データベースではTIMESTAMP型を利用する
+import java.sql.Timestamp;
 import java.sql.*;
+
 //データベースの接続確立に必要
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -117,10 +121,21 @@ public class Main {
         // これが基本パターン！
 
 
+        //PreparedStatementで、パラーメータとして日時情報を指定するには
+        //setTimestamp()を使う
+
+        Date d = new Date();
+        long l = d.getTime();           //いったん long型に格納⑦スル
+        Timestamp ts = new Timestamp(l);//TImestamp型としてインスタンスを作る
+        pstmt.setTimestamp(1, ts);
 
 
+        //SELECT文の結果表に含まれるTIMESTAMP型の列の情報を取り出したい時は！
+        //ResultSetのgetTimestamp()を使う
+        java.sql.TimeStamp ts2 = rs.getTimestamp(1); //new Date()のデータベース版みたいなもの！
+        long l2 = ts2.getTime();//いったんtimestampからlongにそれからlongからdateに変換
+        Date d2 = new Date(l2);    //Timestamp型とDate型を変換させるには一度long型を経由させる必要がある！
 
-         
 
 
 
