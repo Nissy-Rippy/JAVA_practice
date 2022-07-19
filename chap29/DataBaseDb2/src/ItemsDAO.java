@@ -31,7 +31,7 @@ public class ItemsDAO {
         items.add(item);
 
       }
-      rs.close();
+      rs.close(l);
       pstmt.close();
 
       return items;   //閉じた後に最後にreturnで戻り値を返す！

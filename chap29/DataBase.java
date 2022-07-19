@@ -1,4 +1,4 @@
-public class Datebase {
+public class DataBase {
   public static void main(String[] args) {
     
   }
