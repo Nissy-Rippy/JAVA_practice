@@ -4,7 +4,7 @@ import java.net.http.*;
 import java.net.http.HttpClient;
 import java.net.http.HttpClient.Version;
 
-import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.*;//ライブラリ
 
 import java.net.*;
 import java.net.http.*;
@@ -15,6 +15,10 @@ import java.io.*;  //stream形式を利用
 
 public class HttpClientPractice {
 
+  /**
+   * @param args
+   * @throws Exception
+   */
   public static void main(String[] args) throws Exception {
     
     URL url = new URL("https://dokojava.jp/favicon.ico");  //画像ファイルのURL
