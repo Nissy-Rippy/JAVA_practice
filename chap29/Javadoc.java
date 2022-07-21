@@ -19,6 +19,16 @@ public class Javadoc {
    * @param age =>年齢を表している。
    * @exception 発生しそうなエラーとエラーが起きるタイミングなどの解説を書く！
    */
+
+   @SuppressWarnings("serial")
+   @SuppressWarnings("cast")
+   
+   /**
+    * @param   age 年齢
+    * @return  おじいちゃんの名前
+    */
+
+    
   public static String searchHuman(int age) {
     switch(age) {
       case 49 -> System.out.println("おじいちゃん");
@@ -27,4 +37,3 @@ public class Javadoc {
     }
     return "おじいちゃん";
   }
-}
