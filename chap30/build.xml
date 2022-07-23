@@ -1,11 +1,12 @@
-<project name="RPG: ｽｯｷﾘ魔王征伐" basedir=".">    <--ターゲット名
-  <target name="full_build">                     <--ターゲット名！
+
+<project name="RPG: ｽｯｷﾘ魔王征伐" basedir=".">    <プロジェクト名プロジェクトで全体を囲む仕組み
+  <target name="full_build">                     <--ターゲット名一つのまとまりを作るtarget
     <echo message="ビルドを開始します///"  />      <--出力している
     <javac srcdir="." destdir="." />             <--コンパイルするタスク
     <junit  />
     <javadoc><fileset dir=".">                   <--JUnit実行タスク
-      <include name="**/*.java"/>                <--javadoc生成タスク  ふくまれるクラス
-      <exclude name="**/*Test.java" />           <--javadoc生成タスク  テストクラスは対象外であるということ
+      <include name="**/*.java"  />                <--javadoc生成タスクふくまれるクラス
+      <exclude name="**/*Test.java" />           <--javadoc生成タスクテストクラスは対象外であるということ
     </fileset></javadoc>
   </target>
 </project>

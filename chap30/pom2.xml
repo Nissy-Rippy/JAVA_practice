@@ -1,0 +1,58 @@
+<-projectのタグにはPOMの正式なルールでは基本これらの属性を記入しないといけない>
+
+<project
+xmlns="http://maven.apache.prg/POM/4.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://maven.apache.prg/POM/4.0.0
+https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>jp.miybilink.sukkiri</groupId>
+  リンクの逆をするのがおすすめ
+  <artifactId>sukkiri-quest</artifactId>
+  <version>1.0.0</version>
+  3つのリンクを合体させて世界に一つのものを作っている！
+
+  <name>ｽｯｷﾘ魔王征伐</name>  アプリ名！
+  <description>勇者港が仲間たちと冒険する愛と勇気のファンタジーRPG</description>　説明ここ！
+  <inceptionYear>2011</inceptionYear>発売日！
+  組織名！
+  <organization>
+    <name>株式会社ミヤビリンク</name>
+    <url>https://miyabilink.jp</url>
+  </organization>
+  開発者！
+  <developers>
+    <developer>
+      <id>minato</id>
+      <name>ミナト　雄輔</name>
+    </developer>
+
+    <developer>
+      <id>asaka</id>
+      <name>朝香あゆみ</name>
+    </developer>
+  </developers>
+ビルド情報
+  <build>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.9.1</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.1.1</version>
+      </plugin>
+  </build>
+プロパーティー！はここ!
+  <properties>
+    <maven.compiler.target>11</maven.compiler.target>
+         しようちゅうのJavaのバージョンを設定する！
+    <maven.compiler.soure>11</maven.compiler.soure>
+    　　　しようちゅうのJavaのバージョンを設定する！
+  </properties>
+
+</project>
