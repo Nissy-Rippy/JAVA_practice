@@ -1,0 +1,11 @@
+<project name="RPG: ｽｯｷﾘ魔王征伐" basedir=".">    <--ターゲット名
+  <target name="full_build">                     <--ターゲット名！
+    <echo message="ビルドを開始します///"  />      <--出力している
+    <javac srcdir="." destdir="." />             <--コンパイルするタスク
+    <junit  />
+    <javadoc><fileset dir=".">                   <--JUnit実行タスク
+      <include name="**/*.java"/>                <--javadoc生成タスク  ふくまれるクラス
+      <exclude name="**/*Test.java" />           <--javadoc生成タスク  テストクラスは対象外であるということ
+    </fileset></javadoc>
+  </target>
+</project>
