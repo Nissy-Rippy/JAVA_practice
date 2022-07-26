@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Main-Class: jp.miyabilink.atm.Bank
+
+
+
+//マニフェストクラスにバンククラスを指定しておく
+jar -cvfm atm.jar manifest.txt jp\miyabilink\atm\Bank.Class
+
+
+Javaコマンドで打つと下記のようになる
+java -jar atm.jar
