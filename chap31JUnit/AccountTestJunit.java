@@ -20,7 +20,7 @@ public class AccountTestJunit {
    //assertSame
 
 
-//assertNull  　　実際ちがnullかどうか確かめる
+//assertNull      実際ちがnullかどうか確かめる
 //assertNotNull   実際ちがnull以外かどうかを確かめる！！！
 
 //fail()          常に失敗し続ける！！
