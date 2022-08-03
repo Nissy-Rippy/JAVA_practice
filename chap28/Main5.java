@@ -8,7 +8,7 @@ public class Main5 {
     
     Locale loc = Locale.getDefault();
     System.out.println( loc.getCountry() + "-" + loc.getLanguage() );
-    String now = ( new SimpleDateFormat().format(new Date()) );
+    String now = ( new SimpleDateFormat()).format(new Date());
     ResourceBundle rb = ResourceBundle.getBundle("messages");
     System.out.println( rb.getString("CURRENT_TIME_IS") + now );
 
