@@ -1,8 +1,9 @@
-import java.util.Calendar;
-import java.util.Date; //データベースではTIMESTAMP型を利用する
-import java.sql.Timestamp;
-import java.sql.*;
+import static allReview2.AccountType.FUTU;
 
+import java.util.Arrays;
+import java.util.List;
+
+import chpa23.Account;
 //データベースの接続確立に必要
 import java.sql.Connection;
 import java.sql.DriverManager;
