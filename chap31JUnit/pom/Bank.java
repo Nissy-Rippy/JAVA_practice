@@ -12,6 +12,8 @@ public class Bank {
   public void setName(String name) {
     if (name.length() <= 3) {
       throw new IllegalArgumentException("名前の文字が不正です！！");
+    } else {
+      System.out.println("正常です！！");
     }
     
     this.name = name;

@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Hero implements Serializable {
   
-  private String name;
+  String name;
   private int hp;
   private int mp;
   private Sword sword;

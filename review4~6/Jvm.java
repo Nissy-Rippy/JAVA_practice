@@ -8,8 +8,8 @@ import java.lang.reflect.*;
 ;
 
 public class Jvm {
-  final String BR = System.getProperty("line.separator");
-  
+  final String BR = System.getPro   perty("line.separator");
+a   sf 
   /** 
    * @param args
    * @throws Exception

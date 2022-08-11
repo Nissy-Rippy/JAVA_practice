@@ -1,0 +1,57 @@
+# ワークフローの名前を此処に書く　任意の名前でOK
+name: Rails CI/CD
+
+
+# ワークフローをトリガーするGitHubのイベントを指定
+# この書き方だと、mainにプッシュされた時ということ！！(。-∀-)
+on:
+   push:
+       branches: [main]
+
+
+# jobsは複数構成することが可能で、（仮想環境）
+# ひとつのワークフローにひとつ以上必要なものである
+
+# buildは、ジョブの名前になります。ここは、buildじゃなくても任意の名前で大丈夫らしい
+
+# runs-onは処理を実行する環境を指定するコマンドになります！(´・ω・｀)
+jobs:
+  build:
+     runs-on: ubuntu-latest
+
+
+# steps ジョブが行う処理の集合を宣言している！！
+uses　アクションの選択！
+今回の場合はGitHubが提供するactions/checkout@v2というアクションがあるので
+そちらを使っている！
+
+# actions/checkout@v2では、リポジトリをチェックアウトするといった処理がまとめられている。
+# この部分のアクションは自分で作成して公開することもできる！
+
+# nameは、処理の集合の名前を指定している。任意の名前でもおｋ！今回はたまたまDeploy
+
+# env　は使用する環境変数を指定する。
+# 今回は、githubで登録したsecretsを使用していく３つ！
+# 基本的にenvで指定した環境変数はワークフロー全体で使うこともできるし、限定することもできる
+
+
+steps:
+   - uses: action/checkout@v2
+   - name: Deploy
+     env:
+       PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
+       USER_NAME: ${{secrets.USER_NAME}}
+       HOST_NAME: ${{secrets.HOST_NAME}}
+
+# 今回の場合はGithub Actionsの仮想環境内からデプロイする対象のEC2サーバーに接続して、デプロイを行うまでをコマンドしている！
+
+     run: |
+       echo ”$PRIVATE_KEY” > private && chomd 600 PRIVATE_KEY
+       ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd アプリケーション名(getching) &&
+      git pull origin ブランチ名(main) &&
+      ~/.rbenv/shims/bundle install &&
+      ~/.rbenv/shims/bundle exec rails assets:precompile RAILS_ENV=production &&
+      ~/.rbenv/shims/bundle exec rails db:migrate RAILS_ENV=production &&
+      if [[ -e tmp/pids/puma.pid ]];then sudo kill $(cat tmp/pids/puma.pid); echo kill puma process;fi &&
+      ~/.rbenv/shims/rails s -e production'
+

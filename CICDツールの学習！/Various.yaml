@@ -1,0 +1,47 @@
+name: Practice Wrting
+
+on:
+  push:
+     branches: [main]
+  pull_request:
+        branches: 
+           - (main
+           - 'mona/octocat'
+           - 'releases/**'
+
+  label:
+    types: [created, edited]
+
+
+# これはランナーのコンテキストを利用して、
+# パスを設定しログを書き込むようにしている。
+
+# そして、ワークフローが失敗した際には、
+# それらのログをアーティーファクトとしてアップロードするための記述になっている。
+ jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: action/checkout@v3
+        - name: Build with logs
+          run: |
+              mkdir ${{ runner.tempt }}/build_logs
+              ./build.sh --log-path ${{ runner.temp }}/build_logs
+        - name: Upload logs on fail
+          if: ${{ failure() }}
+          uses: actions/upload-artifact@v3
+          with:
+             name: Build failure logs
+             path: ${{ runner.temp }}/build_log
+
+   resister:
+       runs-on: action/checkout@v3
+       if: "contains(join(github.event.pull_request.labels.*.name), 'WIP')"
+       step:
+        - name: run multi git command
+          run: |
+            git config --global user.name "Tda ogihiteru"
+            git config- --global user.email "@@095pro@gmail.com"
+            git add *
+            git commit -m "[ java 学習中なり！]"
+            git status
