@@ -11,12 +11,15 @@ public class Test {
     // FuncList func = new FuncList();
     // Func1 func1 = FuncList::isOdd;
     // Func2 func2 = func::passCheck;
-    // System.out.println(func1.call(4));
+    // System.out.println(func1.call(4)); 
     // System.out.println(func2.call(45, "おじいちゃん"));
     Func1 f1 = x -> x % 2 == 1;
     Func2 f2 = (point, name) -> {
       return name + "さんは" + (point > 65 ? "合格" : "不合格");
     };
+
+    System.out.println(f2.call(43, "goria"));
+
     IntPredicate ip = x -> x % 2 == 1;
 
     List<String> lists = new ArrayList<>();
@@ -35,7 +38,7 @@ public class Test {
     Map<String, Integer> ms = Map.of("東京都", 499, "ブラジル", 333, "南大陸", 4099);
 
     Stream<String> sst = Stream.of("#", "oigfajg", "ごじら", "ごあち");
-    IntStream = Stream.of(1,4,5,6);
+    // IntStream = Stream.of(1,4,5,6);
 
   }
 }
