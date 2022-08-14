@@ -1,0 +1,14 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\yoshiteru toyoda\\Desktop\\commons-lang3-3.12.0.jar",
+    "c:\\Users\\yoshiteru toyoda\\Desktop\\slf4j-api-1.7.36 (1).jar",
+    "c:\\Users\\yoshiteru toyoda\\Downloads\\logback-core-1.2.9 (1).jar",
+    "c:\\Users\\yoshiteru toyoda\\Downloads\\logback-classic-1.2.9 (1).jar",
+    "c:\\Users\\yoshiteru toyoda\\Downloads\\logback-access-1.2.9.jar",
+    "c:\\Users\\yoshiteru toyoda\\Desktop\\log4j-core-2.18.0.jar",
+    "c:\\Users\\yoshiteru toyoda\\Desktop\\log4j-api-2.18.0.jar"
+  ]
+}
