@@ -1,0 +1,10 @@
+
+<hero>
+  <name>ごりたろう</name>
+  <hp>4000</hp>
+  <mp>34</mp>
+  <weapon>
+    <name>黒糖</name>
+    <hp>43435</hp>
+  </weapon>
+</hero>
