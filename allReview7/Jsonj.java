@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Jsonj {
+public class Jsonj implements Serializale {
 
 
   public Hero loadHeroFromFile() throws IOException {

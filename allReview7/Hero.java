@@ -1,4 +1,10 @@
-public class Hero {
+
+import java.io.*;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class Hero implements Serializable {
+
   public int hp;
   public int mp;
   public String name;
