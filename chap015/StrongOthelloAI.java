@@ -1,0 +1,10 @@
+// package chap015;
+
+
+public class StrongOthelloAI implements OthelloAI {
+  public int[] decide(int[] [] board) {
+    /* 盤の状態を詳しく分析して次の手を決める処理を行う */
+    int[][] num;
+    return num;
+  }
+}
