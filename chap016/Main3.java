@@ -44,7 +44,7 @@ public class Main3 {
     JButton buttonW = new JButton("左ボタン！");
     frame.add(buttonW);// 追加はaddだよー！
     JButton buttonE = new JButton("右ボタン！");
-    frame.add(buttonE);// 追加はaddだよー！yghh
+    frame.add(buttonE);// 追加はaddだよー！
       
 
     frame.setVisible(true);

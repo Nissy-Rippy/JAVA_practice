@@ -2,6 +2,7 @@
 
 import javax.swing.*;
 import java.awt.FlowLayout;
+
 public class Main2 {
   public static void main(String[] args) {
 
@@ -12,8 +13,9 @@ public class Main2 {
     //ウィジェット追加の準備！！！
     // frame.setLayout( new FlowLayout() );
     // frame.setLayout(null);  レイアウトを全部自分で決めようとするときはnullにすることによって可能になる！
-    frame.setLayout( new BorderLayout() );
     
+    frame.setLayout(null);
+
     JLabel label = new JLabel("Hello World!!");//ラベルを生成してフレームに追加する
     label.setLocation(10, 10);
     label.setSize(200, 20);
@@ -31,6 +33,7 @@ public class Main2 {
     password.setSize(100,20);
     frame.add(password);
     JButton button = new JButton("押してね！");//ボタンを生成してフレームに追加する！
+    button.addActionListener( new MInatoListener() );
     button.setLocation(250, 30);
     button.setSize(100, 20);
     frame.add(button);//追加はaddだよー！
